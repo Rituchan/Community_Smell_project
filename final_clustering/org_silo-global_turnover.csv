@@ -1,0 +1,22 @@
+Project,Cluster
+QEMU_,Cluster positivo
+Firefox_,Cluster negativo
+GitLab_,Cluster negativo
+LLVM_,Cluster negativo
+Python_,Cluster negativo
+Vagrant_,Cluster negativo
+AngularJS_,Cluster neutro
+Bitcoin_,Cluster neutro
+Blender_,Cluster neutro
+Django_,Cluster neutro
+Emacs_,Cluster neutro
+FFmpeg_,Cluster neutro
+Git_,Cluster neutro
+Gstreamer_,Cluster neutro
+iPython_,Cluster neutro
+LibreOffice_,Cluster neutro
+Mesa_,Cluster neutro
+Nodejs_,Cluster neutro
+Rails_,Cluster neutro
+Salt_,Cluster neutro
+U-boot_,Cluster neutro

@@ -17,9 +17,9 @@ for file_name in os.listdir(folder_path):
 
         # Estrai il valore della correlazione
         try:
-            correlation_value = data.loc['org.silo', 'ratio.smelly.quitters']
+            correlation_value = data.loc['black.cloud', 'code.turnover']
         except KeyError:
-            print(f"Errore nel file {file_name}: 'prima.donnas' o 'core.global.turnover' non trovati.")
+            print(f"Errore nel file {file_name}: 'community smell' o 'metrica' non trovati.")
             continue
 
         # Determina il cluster
@@ -43,7 +43,33 @@ for cluster_name, project_list in clusters.items():
 output_df = pd.DataFrame(output_data)
 
 # Salva il risultato in un file CSV
-output_file = 'org_silo-ratio_smelly_quitters.csv'
+output_file = 'C:/Universita/Magistrale/EQS/Community_Smell_project/data_dir/black_cloud-code_turnover.csv'
 output_df.to_csv(output_file, index=False)
 
 print(f"Risultato salvato in {output_file}")
+
+
+data_dir = 'C:/Universita/Magistrale/EQS/Community_Smell_project/data_dir'  # Sostituisci con il percorso corretto
+for file_name in os.listdir(data_dir):
+    if file_name.endswith("_turnover.csv"):
+        file_path = os.path.join(data_dir, file_name)
+
+        # Carica il file CSV
+        data = pd.read_csv(file_path, index_col=0)
+
+        # Estrai il valore della correlazione
+        try:
+            for valore in data["C2"]:  # Sostituisci con il nome della colonna
+                if valore = "Cluster positivo":
+                    bool positivo = True
+
+        except KeyError:
+            print(f"Errore nel file {file_name}: 'community smell' o 'metrica' non trovati.")
+            continue
+
+
+
+
+        # Aggiungi il file al cluster corrispondente
+        project_name = file_name.replace("pearson-estimate.csv", "").strip()
+        clusters[cluster].append(project_name)
