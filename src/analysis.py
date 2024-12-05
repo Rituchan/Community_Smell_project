@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import ttest_ind
 
 # Directory contenente i file dei report
-directory_path = 'C:/Universita/Magistrale/EQS/Community_Smell_project/report'
+directory_path = 'C:/Universita/Magistrale/EQS/Community_Smell_project/p-value_missing_links_core_mail_turonver'
 
 # Trova tutti i file CSV nella directory
 file_paths = glob.glob(os.path.join(directory_path, "*.csv"))
@@ -16,7 +16,7 @@ df_list = []
 
 # Carica tutti i file CSV in DataFrame
 for file_path in file_paths:
-    project_name = os.path.basename(file_path).split('.')[0]  #basename restituisce il nome del file senza estensione
+    project_name = os.path.basename(file_path).split('.')[0]  # Nome progetto dal nome del file
     project_name = project_name.replace("_report", "").strip()
     df_project = pd.read_csv(file_path)
     df_project['Project'] = project_name  # Aggiungi una colonna per il nome del progetto
@@ -25,72 +25,97 @@ for file_path in file_paths:
 # Unisci tutti i DataFrame in uno solo
 df_all_projects = pd.concat(df_list, ignore_index=True)
 
-# Aggiungi la colonna Cluster in base al progetto (se necessario)
-# Esempio: mappa manualmente i progetti ai rispettivi cluster (positivo/negativo)
+# Aggiungi la colonna Cluster in base al progetto (esempio di mappatura manuale)
 cluster_mapping = {
-    'GitLab': 'Cluster positivo',
-    'LLVM': 'Cluster positivo',
-    'Salt': 'Cluster positivo',
-    'U-boot': 'Cluster positivo',
-    'Bitcoin': 'Cluster negativo',
-    'Django': 'Cluster negativo',
+    'Nodejs': 'Cluster positivo',
     'Firefox': 'Cluster negativo',
-    'QEMU': 'Cluster negativo',
+    'Vagrant': 'Cluster negativo',
 }
+df_all_projects['Cluster'] = df_all_projects['Project'].map(cluster_mapping)
 
-df_all_projects['Cluster'] = df_all_projects['Project'].map(cluster_mapping) # Aggiungi la colonna Cluster
+# Funzione per calcolare e visualizzare la correlazione per ogni progetto
+def calculate_correlation_per_project(df_cluster, metric, cluster_name):
+    # Ottieni l'elenco dei progetti unici nel cluster
+    unique_projects = df_cluster['Project'].unique()
 
-# Verifica la struttura del DataFrame unito
-print(df_all_projects.head())
+    for project in unique_projects:
+        # Filtra i dati per il progetto specifico
+        df_project = df_cluster[df_cluster['Project'] == project]
 
-# 1. Correlazione delle metriche all'interno di ciascun cluster
-# Separazione dei cluster
+        # Filtra solo le colonne numeriche
+        df_project_numeric = df_project.select_dtypes(include=['float64', 'int64'])
+
+        # Rimuovi colonne con varianza nulla e valori NaN
+        df_project_numeric = df_project_numeric.loc[:, df_project_numeric.var() > 0].dropna(axis=1, how='all')
+
+        if metric in df_project_numeric.columns:
+            # Calcola la correlazione della metrica con le altre colonne
+            correlation_with_metric = df_project_numeric.corrwith(df_project_numeric[metric])
+
+            # Visualizza la correlazione
+            print(f"\nCorrelazione con '{metric}' per il progetto '{project}' nel {cluster_name}:")
+            print(correlation_with_metric)
+
+            # Visualizzazione grafica
+            correlation_with_metric.drop(metric, errors='ignore').sort_values().plot(kind='barh', figsize=(10, 6),
+                                                                                     color='skyblue')
+            plt.title(f"Correlazione di '{metric}' con altre metriche - Progetto '{project}' ({cluster_name})")
+            plt.xlabel("Correlazione")
+            plt.ylabel("Metriche")
+            plt.show()
+        else:
+            print(f"La metrica '{metric}' non è presente nei dati del progetto '{project}' ({cluster_name}).")
+
+
+# Cluster positivi (es. NodeJs)
 cluster_positivo = df_all_projects[df_all_projects['Cluster'] == 'Cluster positivo']
+
+# Cluster negativi (es. Firefox, Vagrant)
 cluster_negativo = df_all_projects[df_all_projects['Cluster'] == 'Cluster negativo']
 
-# Matrice di correlazione per il cluster positivo
-corr_positivo = cluster_positivo.corr()
+# Metrica di interesse
+metric = 'core.mail.turnover'
 
-# Matrice di correlazione per il cluster negativo
-corr_negativo = cluster_negativo.corr()
+# Calcola e visualizza la correlazione per ogni progetto nel Cluster Positivo
+print("\n--- Correlazioni nel Cluster Positivo ---")
+calculate_correlation_per_project(cluster_positivo, metric, "Cluster Positivo")
 
-# Visualizzazione delle matrici di correlazione
-plt.figure(figsize=(12, 6))
-sns.heatmap(corr_positivo, annot=True, cmap='coolwarm', fmt='.2f', cbar=True)
-plt.title('Correlazione tra metriche - Cluster Positivo')
-plt.show()
-
-plt.figure(figsize=(12, 6))
-sns.heatmap(corr_negativo, annot=True, cmap='coolwarm', fmt='.2f', cbar=True)
-plt.title('Correlazione tra metriche - Cluster Negativo')
-plt.show()
+# Calcola e visualizza la correlazione per ogni progetto nel Cluster Negativo
+print("\n--- Correlazioni nel Cluster Negativo ---")
+calculate_correlation_per_project(cluster_negativo, metric, "Cluster Negativo")
 
 # 2. Test statistici per differenze tra cluster
-metrics = ['', 'ratio.smelly.quitters', 'altre_metriche']  # Sostituisci con le tue metriche reali
+metrics = ['core.mail.turnover', 'missing.links']  # Sostituisci con le tue metriche reali
 
 # Risultati dei test T
 t_test_results = {}
 
 for metric in metrics:
-    # Estrazione delle metriche per ogni cluster
-    data_pos = cluster_positivo[metric].dropna()
-    data_neg = cluster_negativo[metric].dropna()
+    if metric in cluster_positivo.columns and metric in cluster_negativo.columns:
+        # Estrai le metriche per ogni cluster, gestendo i valori mancanti
+        data_pos = cluster_positivo[metric].dropna()
+        data_neg = cluster_negativo[metric].dropna()
 
-    # Esegui il T-test
-    t_stat, p_value = ttest_ind(data_pos, data_neg)
+        # Esegui il T-test
+        t_stat, p_value = ttest_ind(data_pos, data_neg)
 
-    # Salva i risultati
-    t_test_results[metric] = {'t_statistic': t_stat, 'p_value': p_value}
+        # Salva i risultati
+        t_test_results[metric] = {'t_statistic': t_stat, 'p_value': p_value}
+    else:
+        print(f"Attenzione: La metrica '{metric}' non è presente in uno dei cluster.")
 
 # Visualizza i risultati dei test T
 for metric, results in t_test_results.items():
     print(f"Metrica: {metric}")
     print(f"T-statistic: {results['t_statistic']:.3f}, P-value: {results['p_value']:.3f}")
-    print("Differenza significativa?" , "Sì" if results['p_value'] < 0.05 else "No")
+    print("Differenza significativa?", "Sì" if results['p_value'] < 0.05 else "No")
     print("-" * 40)
 
 # 3. Visualizzazione delle metriche tra i cluster per un confronto diretto
 # Confronto per una metrica (esempio con 'missing.links')
-sns.boxplot(x='Cluster', y='missing.links', data=df_all_projects)
-plt.title('Confronto di Missing Links tra Cluster Positivi e Negativi')
-plt.show()
+if 'missing.links' in df_all_projects.columns:
+    sns.boxplot(x='Cluster', y='missing.links', data=df_all_projects.dropna(subset=['missing.links']))
+    plt.title('Confronto di Missing Links tra Cluster Positivi e Negativi')
+    plt.show()
+else:
+    print("La metrica 'missing.links' non è presente nei dati.")
