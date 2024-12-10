@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import ttest_ind
 
 # Directory contenente i file dei report
-directory_path = 'C:/Universita/Magistrale/EQS/Community_Smell_project/p-value_missing_links_core_mail_turonver'
+directory_path = 'C:/Universita/Magistrale/EQS/Community_Smell_project/analysys_data'
 
 # Trova tutti i file CSV nella directory
 file_paths = glob.glob(os.path.join(directory_path, "*.csv"))
@@ -27,14 +27,25 @@ df_all_projects = pd.concat(df_list, ignore_index=True)
 
 # Aggiungi la colonna Cluster in base al progetto (esempio di mappatura manuale)
 cluster_mapping = {
-    'Nodejs': 'Cluster positivo',
-    'Firefox': 'Cluster negativo',
-    'Vagrant': 'Cluster negativo',
+    'Django' : 'Cluster negativo',
+    'Firefox' : 'Cluster negativo',
+    'GitLab' : 'Cluster negativo',
+    'Gstreamer' : 'Cluster negativo',
+    'iPython' : 'Cluster negativo',
+    'Mesa' : 'Cluster negativo',
+    'Nodejs' : 'Cluster negativo',
+    'Python' : 'Cluster negativo',
+    'Rails' : 'Cluster negativo',
+    'Salt' : 'Cluster negativo',
 }
 df_all_projects['Cluster'] = df_all_projects['Project'].map(cluster_mapping)
 
-# Funzione per calcolare e visualizzare la correlazione per ogni progetto
-def calculate_correlation_per_project(df_cluster, metric, cluster_name):
+
+
+def calculate_correlation_per_project(df_cluster, metric, cluster_name, output_directory):
+    # Crea la directory di output se non esiste
+    os.makedirs(output_directory, exist_ok=True)
+
     # Ottieni l'elenco dei progetti unici nel cluster
     unique_projects = df_cluster['Project'].unique()
 
@@ -52,6 +63,11 @@ def calculate_correlation_per_project(df_cluster, metric, cluster_name):
             # Calcola la correlazione della metrica con le altre colonne
             correlation_with_metric = df_project_numeric.corrwith(df_project_numeric[metric])
 
+            # Salva i risultati in un CSV
+            output_file = os.path.join(output_directory, f"{project}_{metric}_correlations.csv")
+            correlation_with_metric.to_csv(output_file, header=['Correlation'], index_label='Metric')
+            print(f"File salvato: {output_file}")
+
             # Visualizza la correlazione
             print(f"\nCorrelazione con '{metric}' per il progetto '{project}' nel {cluster_name}:")
             print(correlation_with_metric)
@@ -66,7 +82,7 @@ def calculate_correlation_per_project(df_cluster, metric, cluster_name):
         else:
             print(f"La metrica '{metric}' non è presente nei dati del progetto '{project}' ({cluster_name}).")
 
-
+output_directory = 'C:/Universita/Magistrale/EQS/Community_Smell_project/correlation_'  # Sostituisci con il percorso desiderato
 # Cluster positivi (es. NodeJs)
 cluster_positivo = df_all_projects[df_all_projects['Cluster'] == 'Cluster positivo']
 
@@ -74,16 +90,19 @@ cluster_positivo = df_all_projects[df_all_projects['Cluster'] == 'Cluster positi
 cluster_negativo = df_all_projects[df_all_projects['Cluster'] == 'Cluster negativo']
 
 # Metrica di interesse
-metric = 'core.mail.turnover'
+metric = 'mail.mod'
 
-# Calcola e visualizza la correlazione per ogni progetto nel Cluster Positivo
+# Calcola e salva la correlazione per ogni progetto nel Cluster Positivo
 print("\n--- Correlazioni nel Cluster Positivo ---")
-calculate_correlation_per_project(cluster_positivo, metric, "Cluster Positivo")
+calculate_correlation_per_project(cluster_positivo, metric, "Cluster Positivo", output_directory)
 
-# Calcola e visualizza la correlazione per ogni progetto nel Cluster Negativo
+# Calcola e salva la correlazione per ogni progetto nel Cluster Negativo
 print("\n--- Correlazioni nel Cluster Negativo ---")
-calculate_correlation_per_project(cluster_negativo, metric, "Cluster Negativo")
+calculate_correlation_per_project(cluster_negativo, metric, "Cluster Negativo", output_directory)
 
+
+
+'''
 # 2. Test statistici per differenze tra cluster
 metrics = ['core.mail.turnover', 'missing.links']  # Sostituisci con le tue metriche reali
 
@@ -119,3 +138,4 @@ if 'missing.links' in df_all_projects.columns:
     plt.show()
 else:
     print("La metrica 'missing.links' non è presente nei dati.")
+'''
