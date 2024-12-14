@@ -1,0 +1,4 @@
+Project,Cluster,Correlation,P-Value
+Nodejs_,Cluster positivo,0.681153532099708,0.0210168306806542
+Vagrant_,Cluster negativo,-0.717318948807658,0.0129590188355606
+Firefox_,Cluster negativo,-0.621171074578034,0.0413687655646664

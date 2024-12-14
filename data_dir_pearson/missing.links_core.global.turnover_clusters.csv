@@ -1,0 +1,4 @@
+Project,Cluster,Correlation,P-Value
+GitLab_,Cluster negativo,-0.760616604255553,0.0065682966517363
+Vagrant_,Cluster negativo,-0.689315900532644,0.0189506988630379
+Firefox_,Cluster negativo,-0.905825070786087,0.0001231712463061

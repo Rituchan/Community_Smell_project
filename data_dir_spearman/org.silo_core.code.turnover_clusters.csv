@@ -1,0 +1,5 @@
+Project,Cluster,Correlation,P-Value
+Django_spearman-estimate.csv,Cluster negativo,-0.783601121834513,0.0043229900186627
+GitLab_spearman-estimate.csv,Cluster negativo,-0.890909090909091,0.0004283612055632
+Vagrant_spearman-estimate.csv,Cluster negativo,-0.619591584706359,0.042040065749582
+Firefox_spearman-estimate.csv,Cluster negativo,-0.909090909090909,5.55408265736444e-05

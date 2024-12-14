@@ -1,0 +1,5 @@
+Project,Cluster,Correlation,P-Value
+GitLab_,Cluster positivo,0.836461827076206,0.0013297879529221
+Salt_,Cluster positivo,0.769280723467121,0.0056403628954143
+U-boot_,Cluster positivo,0.767468459048403,0.0058259345086873
+Django_,Cluster negativo,-0.669123695654287,0.0243473356890528
