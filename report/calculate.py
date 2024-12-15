@@ -23,7 +23,7 @@ def process_smells(file_path, community_smells):
     # Inizializza le matrici
     columns = data_filtered.columns
     dominance_matrix = np.zeros((len(columns), len(columns)))
-    co_occurrence_matrix = np.zeros((len(columns), len(columns))) #zeros crea una matrice di zeri
+    co_occurrence_matrix = np.zeros((len(columns), len(columns)))
 
     # Calcola le matrici
     for i in range(len(columns)):
@@ -59,12 +59,12 @@ def visualize_graphs(dominance_df, co_occurrence_df, project_name):
             if dominance_weight != 0:
                 G_dominance.add_edge(columns[i], columns[j], weight=dominance_weight)
 
-    plt.figure(figsize=(10, 8))
-    pos = nx.spring_layout(G_dominance)
-    nx.draw(G_dominance, pos, with_labels=True, node_color="skyblue", node_size=3000, edge_color="gray", font_size=12)
+    plt.figure(figsize=(14, 12))
+    pos = nx.spring_layout(G_dominance, k=1.0, iterations=100, seed=42)  # Incrementate le iterazioni per una migliore disposizione
+    nx.draw(G_dominance, pos, with_labels=True, node_color="skyblue", node_size=2000, edge_color="gray", font_size=14)
     labels = nx.get_edge_attributes(G_dominance, 'weight')
     formatted_labels = {k: f'{v:.2f}' for k, v in labels.items()}
-    nx.draw_networkx_edge_labels(G_dominance, pos, edge_labels=formatted_labels)
+    nx.draw_networkx_edge_labels(G_dominance, pos, edge_labels=formatted_labels, font_size=14)
     plt.title(f'Grafo di Dominanza - {project_name}')
     plt.show()
 
@@ -80,15 +80,16 @@ def visualize_graphs(dominance_df, co_occurrence_df, project_name):
             if co_occurrence_weight > 0:
                 G_co_occurrence.add_edge(columns[i], columns[j], weight=co_occurrence_weight)
 
-    plt.figure(figsize=(10, 8))
-    pos = nx.spring_layout(G_co_occurrence)
-    nx.draw(G_co_occurrence, pos, with_labels=True, node_color="lightgreen", node_size=3000, edge_color="gray",
-            font_size=12)
+    plt.figure(figsize=(14, 12))
+    pos = nx.kamada_kawai_layout(G_co_occurrence)  # Usato un layout alternativo per maggiore leggibilità
+    nx.draw(G_co_occurrence, pos, with_labels=True, node_color="lightgreen", node_size=2000, edge_color="gray",
+            font_size=14)
     labels = nx.get_edge_attributes(G_co_occurrence, 'weight')
     formatted_labels = {k: f'{v:.2f}' for k, v in labels.items()}
-    nx.draw_networkx_edge_labels(G_co_occurrence, pos, edge_labels=formatted_labels)
+    nx.draw_networkx_edge_labels(G_co_occurrence, pos, edge_labels=formatted_labels, font_size=14)
     plt.title(f'Grafo di Co-occorrenza - {project_name}')
     plt.show()
+
 
 
 # Cerca tutti i file _report.csv nella directory corrente
