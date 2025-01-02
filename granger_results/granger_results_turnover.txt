@@ -1,0 +1,562 @@
+=== Risultati Test di Granger ===
+
+
+=== Risultati per il progetto: GitLab_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.005).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: global.turnover causa missing.links
+Significativo: global.turnover causa missing.links (p-value=0.045)
+
+Test di Granger: code.turnover causa missing.links
+Significativo: code.turnover causa missing.links (p-value=0.021)
+
+Test di Granger: global.turnover causa org.silo
+Significativo: global.turnover causa org.silo (p-value=0.036)
+
+Test di Granger: code.turnover causa org.silo
+Significativo: code.turnover causa org.silo (p-value=0.015)
+
+
+=== Risultati per il progetto: U-boot_report ===
+prima.donnas: Serie stazionaria (p-value=0.009).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.001).
+missing.links: Serie stazionaria (p-value=0.031).
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: global.turnover causa black.cloud
+Significativo: global.turnover causa black.cloud (p-value=0.006)
+
+Test di Granger: code.turnover causa black.cloud
+Significativo: code.turnover causa black.cloud (p-value=0.002)
+
+Test di Granger: core.code.turnover causa black.cloud
+Significativo: core.code.turnover causa black.cloud (p-value=0.004)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.014)
+
+Test di Granger: core.mail.turnover causa radio.silence
+Significativo: core.mail.turnover causa radio.silence (p-value=0.003)
+
+Test di Granger: ratio.smelly.quitters causa org.silo
+Significativo: ratio.smelly.quitters causa org.silo (p-value=0.001)
+
+
+=== Risultati per il progetto: Mesa_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.000).
+global.turnover: Serie stazionaria (p-value=0.043).
+code.turnover: Serie stazionaria (p-value=0.011).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie stazionaria (p-value=0.007).
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.005)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.030)
+
+Test di Granger: core.mail.turnover causa radio.silence
+Significativo: core.mail.turnover causa radio.silence (p-value=0.018)
+
+Test di Granger: ratio.smelly.quitters causa radio.silence
+Significativo: ratio.smelly.quitters causa radio.silence (p-value=0.033)
+
+
+=== Risultati per il progetto: Django_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: ratio.smelly.quitters causa black.cloud
+Significativo: ratio.smelly.quitters causa black.cloud (p-value=0.037)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: core.code.turnover causa radio.silence
+Significativo: core.code.turnover causa radio.silence (p-value=0.014)
+
+Test di Granger: ratio.smelly.quitters causa radio.silence
+Significativo: ratio.smelly.quitters causa radio.silence (p-value=0.000)
+
+Test di Granger: ratio.smelly.quitters causa missing.links
+Significativo: ratio.smelly.quitters causa missing.links (p-value=0.005)
+
+Test di Granger: ratio.smelly.quitters causa org.silo
+Significativo: ratio.smelly.quitters causa org.silo (p-value=0.046)
+
+
+=== Risultati per il progetto: Emacs_report ===
+prima.donnas: Serie stazionaria (p-value=0.006).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: code.turnover causa prima.donnas
+Significativo: code.turnover causa prima.donnas (p-value=0.037)
+
+Test di Granger: ratio.smelly.quitters causa black.cloud
+Significativo: ratio.smelly.quitters causa black.cloud (p-value=0.019)
+
+Test di Granger: ratio.smelly.quitters causa missing.links
+Significativo: ratio.smelly.quitters causa missing.links (p-value=0.040)
+
+
+=== Risultati per il progetto: FFmpeg_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie stazionaria (p-value=0.034).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie stazionaria (p-value=0.001).
+
+Test di Granger: ratio.smelly.quitters causa prima.donnas
+Significativo: ratio.smelly.quitters causa prima.donnas (p-value=0.036)
+
+Test di Granger: core.code.turnover causa black.cloud
+Significativo: core.code.turnover causa black.cloud (p-value=0.029)
+
+Test di Granger: code.turnover causa radio.silence
+Significativo: code.turnover causa radio.silence (p-value=0.011)
+
+Test di Granger: code.turnover causa missing.links
+Significativo: code.turnover causa missing.links (p-value=0.004)
+
+Test di Granger: global.turnover causa org.silo
+Significativo: global.turnover causa org.silo (p-value=0.045)
+
+Test di Granger: code.turnover causa org.silo
+Significativo: code.turnover causa org.silo (p-value=0.001)
+
+
+=== Risultati per il progetto: Nodejs_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.012).
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: code.turnover causa radio.silence
+Significativo: code.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: core.code.turnover causa radio.silence
+Significativo: core.code.turnover causa radio.silence (p-value=0.001)
+
+Test di Granger: global.turnover causa missing.links
+Significativo: global.turnover causa missing.links (p-value=0.011)
+
+Test di Granger: ratio.smelly.quitters causa missing.links
+Significativo: ratio.smelly.quitters causa missing.links (p-value=0.005)
+
+Test di Granger: global.turnover causa org.silo
+Significativo: global.turnover causa org.silo (p-value=0.014)
+
+Test di Granger: ratio.smelly.quitters causa org.silo
+Significativo: ratio.smelly.quitters causa org.silo (p-value=0.005)
+
+
+=== Risultati per il progetto: Rails_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.005).
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie stazionaria (p-value=0.003).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.014).
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.006)
+
+Test di Granger: code.turnover causa radio.silence
+Significativo: code.turnover causa radio.silence (p-value=0.010)
+
+Test di Granger: core.code.turnover causa radio.silence
+Significativo: core.code.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: ratio.smelly.quitters causa missing.links
+Significativo: ratio.smelly.quitters causa missing.links (p-value=0.000)
+
+Test di Granger: global.turnover causa org.silo
+Significativo: global.turnover causa org.silo (p-value=0.048)
+
+Test di Granger: ratio.smelly.quitters causa org.silo
+Significativo: ratio.smelly.quitters causa org.silo (p-value=0.000)
+
+
+=== Risultati per il progetto: LibreOffice_report ===
+prima.donnas: Serie stazionaria (p-value=0.005).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.018).
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.003).
+
+Test di Granger: code.turnover causa prima.donnas
+Significativo: code.turnover causa prima.donnas (p-value=0.045)
+
+Test di Granger: core.code.turnover causa prima.donnas
+Significativo: core.code.turnover causa prima.donnas (p-value=0.001)
+
+Test di Granger: global.turnover causa black.cloud
+Significativo: global.turnover causa black.cloud (p-value=0.025)
+
+Test di Granger: code.turnover causa black.cloud
+Significativo: code.turnover causa black.cloud (p-value=0.022)
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: code.turnover causa radio.silence
+Significativo: code.turnover causa radio.silence (p-value=0.001)
+
+Test di Granger: core.mail.turnover causa missing.links
+Significativo: core.mail.turnover causa missing.links (p-value=0.003)
+
+Test di Granger: core.global.turnover causa org.silo
+Significativo: core.global.turnover causa org.silo (p-value=0.039)
+
+Test di Granger: core.mail.turnover causa org.silo
+Significativo: core.mail.turnover causa org.silo (p-value=0.010)
+
+
+=== Risultati per il progetto: Git_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie stazionaria (p-value=0.033).
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.009).
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie stazionaria (p-value=0.000).
+
+Test di Granger: core.global.turnover causa prima.donnas
+Significativo: core.global.turnover causa prima.donnas (p-value=0.008)
+
+Test di Granger: core.mail.turnover causa prima.donnas
+Significativo: core.mail.turnover causa prima.donnas (p-value=0.005)
+
+
+=== Risultati per il progetto: iPython_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.000).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.018)
+
+Test di Granger: code.turnover causa radio.silence
+Significativo: code.turnover causa radio.silence (p-value=0.009)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.004)
+
+Test di Granger: core.mail.turnover causa radio.silence
+Significativo: core.mail.turnover causa radio.silence (p-value=0.007)
+
+
+=== Risultati per il progetto: LLVM_report ===
+prima.donnas: Serie stazionaria (p-value=0.003).
+black.cloud: Serie stazionaria (p-value=0.000).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.021).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: code.turnover causa prima.donnas
+Significativo: code.turnover causa prima.donnas (p-value=0.014)
+
+Test di Granger: core.code.turnover causa prima.donnas
+Significativo: core.code.turnover causa prima.donnas (p-value=0.005)
+
+Test di Granger: global.turnover causa radio.silence
+Significativo: global.turnover causa radio.silence (p-value=0.005)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.000)
+
+Test di Granger: ratio.smelly.quitters causa radio.silence
+Significativo: ratio.smelly.quitters causa radio.silence (p-value=0.001)
+
+Test di Granger: code.turnover causa missing.links
+Significativo: code.turnover causa missing.links (p-value=0.043)
+
+Test di Granger: code.turnover causa org.silo
+Significativo: code.turnover causa org.silo (p-value=0.005)
+
+Test di Granger: core.mail.turnover causa org.silo
+Significativo: core.mail.turnover causa org.silo (p-value=0.008)
+
+
+=== Risultati per il progetto: Gstreamer_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.026).
+org.silo: Serie stazionaria (p-value=0.035).
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.004).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie stazionaria (p-value=0.007).
+core.code.turnover: Serie stazionaria (p-value=0.046).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.025).
+
+Test di Granger: global.turnover causa prima.donnas
+Significativo: global.turnover causa prima.donnas (p-value=0.000)
+
+Test di Granger: code.turnover causa prima.donnas
+Significativo: code.turnover causa prima.donnas (p-value=0.000)
+
+Test di Granger: core.mail.turnover causa prima.donnas
+Significativo: core.mail.turnover causa prima.donnas (p-value=0.000)
+
+Test di Granger: core.code.turnover causa prima.donnas
+Significativo: core.code.turnover causa prima.donnas (p-value=0.004)
+
+Test di Granger: ratio.smelly.quitters causa black.cloud
+Significativo: ratio.smelly.quitters causa black.cloud (p-value=0.003)
+
+Test di Granger: ratio.smelly.quitters causa radio.silence
+Significativo: ratio.smelly.quitters causa radio.silence (p-value=0.000)
+
+Test di Granger: global.turnover causa missing.links
+Significativo: global.turnover causa missing.links (p-value=0.026)
+
+Test di Granger: global.turnover causa org.silo
+Significativo: global.turnover causa org.silo (p-value=0.011)
+
+Test di Granger: code.turnover causa org.silo
+Significativo: code.turnover causa org.silo (p-value=0.014)
+
+Test di Granger: core.mail.turnover causa org.silo
+Significativo: core.mail.turnover causa org.silo (p-value=0.039)
+
+
+=== Risultati per il progetto: Python_report ===
+prima.donnas: Serie stazionaria (p-value=nan).
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: AngularJS_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: Blender_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: core.code.turnover causa radio.silence
+Significativo: core.code.turnover causa radio.silence (p-value=0.013)
+
+
+=== Risultati per il progetto: Firefox_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.001).
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie non stazionaria, differenziata.
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.002).
+
+Test di Granger: core.mail.turnover causa radio.silence
+Significativo: core.mail.turnover causa radio.silence (p-value=0.035)
+
+
+=== Risultati per il progetto: QEMU_report ===
+prima.donnas: Serie stazionaria (p-value=0.003).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.042).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.000).
+core.code.turnover: Serie stazionaria (p-value=0.008).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: Salt_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie non stazionaria, differenziata.
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.018).
+core.code.turnover: Serie non stazionaria, differenziata.
+ratio.smelly.quitters: Serie non stazionaria, differenziata.
+
+Test di Granger: global.turnover causa prima.donnas
+Significativo: global.turnover causa prima.donnas (p-value=0.000)
+
+Test di Granger: code.turnover causa prima.donnas
+Significativo: code.turnover causa prima.donnas (p-value=0.008)
+
+Test di Granger: core.code.turnover causa prima.donnas
+Significativo: core.code.turnover causa prima.donnas (p-value=0.002)
+
+Test di Granger: ratio.smelly.quitters causa prima.donnas
+Significativo: ratio.smelly.quitters causa prima.donnas (p-value=0.000)
+
+Test di Granger: core.global.turnover causa black.cloud
+Significativo: core.global.turnover causa black.cloud (p-value=0.000)
+
+Test di Granger: core.mail.turnover causa black.cloud
+Significativo: core.mail.turnover causa black.cloud (p-value=0.000)
+
+Test di Granger: core.global.turnover causa radio.silence
+Significativo: core.global.turnover causa radio.silence (p-value=0.005)
+
+
+=== Risultati per il progetto: Bitcoin_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.017).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+global.turnover: Serie stazionaria (p-value=0.000).
+code.turnover: Serie stazionaria (p-value=0.000).
+core.global.turnover: Serie stazionaria (p-value=0.009).
+core.mail.turnover: Serie non stazionaria, differenziata.
+core.code.turnover: Serie stazionaria (p-value=0.001).
+ratio.smelly.quitters: Serie stazionaria (p-value=0.000).
+
+Test di Granger: core.mail.turnover causa radio.silence
+Significativo: core.mail.turnover causa radio.silence (p-value=0.025)
+
+Test di Granger: core.code.turnover causa missing.links
+Significativo: core.code.turnover causa missing.links (p-value=0.005)
+
+Test di Granger: ratio.smelly.quitters causa missing.links
+Significativo: ratio.smelly.quitters causa missing.links (p-value=0.007)
+
+Test di Granger: core.code.turnover causa org.silo
+Significativo: core.code.turnover causa org.silo (p-value=0.013)
+
+Test di Granger: ratio.smelly.quitters causa org.silo
+Significativo: ratio.smelly.quitters causa org.silo (p-value=0.001)
+
+
+=== Risultati per il progetto: Vagrant_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie stazionaria (p-value=0.030).
+org.silo: Serie stazionaria (p-value=0.029).
+global.turnover: Serie non stazionaria, differenziata.
+code.turnover: Serie stazionaria (p-value=0.001).
+core.global.turnover: Serie stazionaria (p-value=0.000).
+core.mail.turnover: Serie stazionaria (p-value=0.039).
+core.code.turnover: Serie stazionaria (p-value=0.000).
+ratio.smelly.quitters: Serie non stazionaria, differenziata.

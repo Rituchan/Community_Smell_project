@@ -1,0 +1,138 @@
+{
+  "Security": [
+    "security", "vulnerability", "vulnerabilities", "patch security", "security fix",
+    "security update", "secure", "breach", "data protection"
+  ],
+  "Experimental/Prototype": [
+    "experimental", "prototypes", "experiment", "experiments", "poc", "proof of concept",
+    "spike", "spikes", "alpha", "beta", "alpha version", "beta version", "alpha release", "beta release","simulation",
+    "simulations", "simulated", "simulate", "prototype", "prototyping", "experimentation", "experimenting"
+  ],
+  "Rollback": [
+    "rollback", "revert", "reverts", "reverted"
+  ],
+  "Performance Improvements": [
+    "performance", "optimizes", "optimized", "optimize", "optimization", "speed", "efficiency", "faster",
+    "improve performance", "cache", "caching", "speedup", "speed up", "speeds up", "speeding up", "time", "latency",
+    "throughput", "performance tuning", "performance improvement", "performance enhancements", "performance boost",
+    "refresher", "refreshes", "refreshed", "refreshing", "refresh"
+  ],
+  "Dependencies": [
+    "dependency", "dependencies", "library", "libraries", "package", "packages", "module",
+    "modules", "upgrade dependency", "update dependencies"
+  ],
+  "Style/Formatting": [
+    "style", "styles", "styled", "format", "formats", "formatted", "lint", "lints", "linted",
+    "prettify", "prettifies", "prettified", "code style", "encoding", "formatting", "format code", "format codes",
+    "formatting code", "formatting codes", "style guide", "style guides", "style guide compliance", "style guide compliant",
+    "style guide adherence", "style guide adherence", "style guide enforcement", "style guide enforcement", "decoding",
+    "decodes", "decoded", "decoding", "decoding code", "decoding codes"
+  ],
+  "Build/Configuration": [
+    "build", "builds", "built", "config", "configs", "configuration", "ci", "pipeline", "workflow",
+    "build process", "init", "initialize", "initializes", "initialized", "setup", "set up", "setups",
+    "initialization", "initializations", "configure", "configures", "configured", "setup process", "preferences",
+    "settings", "setup guide", "setup instructions", "setup manual", "setup steps", "setup tutorial"
+  ],
+  "Merge/Conflict Resolution": [
+    "merge", "merges", "merged", "conflict", "conflicts", "resolve conflict", "resolved conflict",
+    "merge conflict", "merge conflicts"
+  ],
+  "Tests": [
+    "test", "tests", "tested", "unittest", "unit test", "integration test", "testing", "add tests"
+  ],
+  "Cleanup": [
+    "clean", "cleans", "cleaned", "legacy", "remove unused", "cleanup", "unused", "obsolete", "remove",
+    "deprecate", "deprecated"
+  ],
+  "Refactoring": [
+    "refactor", "refactors", "refactored", "restructure", "restructures", "restructured", "simplify",
+    "clean code", "code cleanup", "move", "moves", "moved", "reorganize", "reorganizes", "reorganized", "reorganization",
+    "overridden", "override", "overrides", "overriding"
+
+  ],
+  "Major Release": [
+    "major release", "major version", "major update", "major changes", "major upgrade"
+  ],
+  "Minor Release": [
+    "minor release", "minor version", "minor update", "minor changes", "minor upgrade"
+  ],
+
+  "Release": [
+    "release", "releases", "released", "version", "versions", "versioned", "tag", "tags", "tagged",
+    "publish", "publishes", "published"
+  ],
+
+  "Update": [
+    "update", "updates", "updated", "upgrade", "upgrades", "upgraded", "revise", "revises", "revised",
+    "improve", "improves", "improved", "patch","change", "changes", "changed", "modify", "modifies", "modified",
+    "enhance", "enhances", "enhanced", "better", "bettered", "betterment", "betterments", "bettering", "patches"
+  ],
+  "Documentation": [
+    "doc", "docs", "docs(", "documentation", "readme", "guide", "manual", "instructions", "comments"
+  ],
+  "Feature Addition": [
+    "add", "adds", "added", "create", "creates", "created", "implement", "implements", "implemented",
+    "new feature", "new functionality", "enhance", "enhanced", "feature", "features", "functionality", "functionalities"
+  ],
+  "Bug Fix": [
+    "fix", "fixes", "fixed", "repair", "repairs", "repaired", "bug", "issue", "resolve", "resolved", "error", "errors",
+    "bugfix", "bugfixes", "bug fix", "bug fixes", "bugfixing", "bug fixing", "adjust", "adjusts", "adjusted", "initialize",
+    "initializes", "initialized", "missing", "missing file", "missing files", "fix error", "fixes error", "fixing error"
+  ],
+  "Architecture": [
+    "architecture", "architectural", "design", "designs", "designed", "structure", "restructure",
+    "restructures", "restructured", "design pattern", "design patterns", "architectural pattern"
+  ],
+  "Deprecation": [
+    "deprecate", "deprecates", "deprecated", "obsolete", "remove", "removes", "removed", "delete",
+    "deletes", "deleted", "eliminate", "eliminates", "eliminated", "obsolete", "obsoleted"
+  ],
+  "Production": [
+    "production", "prod", "deploy", "deploys", "deployed", "deployment", "deployments", "live",
+    "production ready"
+  ],
+  "Monitoring": [
+    "monitor", "monitors", "monitored", "logging", "logs", "log", "metrics", "monitoring",
+    "observability", "observability tools"
+  ],
+  "Data Management": [
+    "data", "datas", "data migration","data schema","database", "databases", "db", "sql", "nosql", "database management",
+    "database migration", "database schema", "id", "ids", "primary key", "primary keys", "foreign key", "foreign keys",
+    "index", "indexes", "table", "tables", "row", "rows", "entries", "entry", "column", "columns", "query", "queries",
+    "volume", "data volume", "data storage", "data store", "data stores", "data management", "data processing", "data processing pipeline"
+
+  ],
+  "Git": [
+    "git", "branch", "branches", "commit", "commits", "committed", "pull request", "pull requests",
+    "merge request", "merge requests", "gitlab", "github", "bitbucket", "force push", "force merge", "versioning",
+    "version control", "gitignore", "gitignore file", "gitignore files", "gitignore changes", "gitignore update"
+  ],
+  "User Interface": [
+    "ui", "user interface", "interface", "interfaces", "design", "designs", "designed", "ui/ux",
+    "ux", "user experience", "user interface design"
+  ],
+  "Quality Assurance": [
+    "qa", "quality assurance", "quality", "qa testing", "quality control",
+    "quality engineering"
+  ],
+  "Machine Learning": [
+    "machine learning", "ml", "ai", "artificial intelligence", "model","deep learning", "neural network",
+    "tensorflow", "keras", "pytorch", "scikit-learn", "nlp", "natural language processing"
+  ],
+  "Frontend": [
+    "frontend", "front-end", "client", "client side", "client-side", "browser", "web", "web development",
+    "web design", "web app", "web application", "web technologies", "gui", "render", "renders", "rendered", "rendering",
+    "icon", "icons", "color", "colors", "coloring", "colorful", "color scheme", "color schemes", "color palette", "font",
+    "fonts", "typography", "typographies", "typographic", "typographic design", "typographic designs", "typographic style"
+  ],
+    "Backend": [
+        "backend", "back-end", "server", "server side", "server-side", "api", "apis", "rest", "restful",
+        "restful api", "backend development", "backend technologies"
+    ],
+  "Service": [
+    "service", "services", "microservice", "microservices", "service oriented architecture",
+    "soa", "service architecture", "service discovery", "service mesh", "server"
+  ]
+
+}

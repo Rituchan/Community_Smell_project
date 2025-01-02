@@ -1,0 +1,2826 @@
+mounting to paths where user has no write permissions (e.g. /)
+mounting as regular user instead of root
+capability to mount smb shares in darwin guests
+unc paths should have backslashes, not front-slashes.
+do not use ftp.list for checking the existence of a remote directory
+ignore vendor/
+reorder forward port args in getting started
+provisioners/chef: actually use command -v
+provisioners/chef: use command -v to check for binary [gh-5167]
+write to stdout before exit 1
+core: don't allow '/' in vm name [gh-4289]
+core: disallow brackets in vm names [gh-4319]
+core: don't load curlrc [gh-4328]
+commands/reload: show post-up message [gh-4168]
+core: box names with colons work on windows [gh-4100]
+vagrantfile for vagrant dev [gh-4089]
+core: guard against ssh to localhost:22 [gh-4070]
+core: lock machine action on vf name too [gh-4065]
+core: machine#reload
+core: preserve downloaded file in more cases [gh-4301]
+guests/nixos: don't detect as windows [gh-4302]
+provisioners/puppet: don't repeat output when prov fails [gh-4303]
+provisioners/salt: use exit code to detect failure [gh-4304]
+provisioners/salt: whitespace
+provisioners/chef: put global lock around knife exec
+rsync on smartos should use pfexec
+subprocess: respect listeners on final yield
+accept vhd as well as vhdx file types on hyper-v
+encode string representation of environment object for seamless printing
+ensure virtualbox virtual disks are stored in the correct directory round 2
+ensure virtualbox virtual disks are stored in the correct directory on windows hosts
+virtualbox driver should replace only last occurence of suggested vm name.
+note that rsync__args ownership options aren't used.
+link to the basic options page for owner and group.
+avahi not needed
+don't output stdout and stderr twice when shell provisioner fails
+
+[gh-4086]
+trailing comma
+replaces bundler details with wiki link
+exit the ssh session before vagrant destroy
+
+how to exit the session: http://superuser.com/questions/704032/how-to-exit-ssh-of-vagrant-in-terminal
+authenticate metadata box urls
+use a hash for directory lookups
+hyperv differencing disk
+typo: "complements" for making it complete.
+
+if something complements something, it completes it. compliment means
+praise or free.
+correctly detect chefdk install
+gh-4201: filders isn't a real word
+provisioners/ansible: show ansible command when vagrant_log=debug
+force rm tempfiles (no rescue nil); use right var
+automatically install chef when provisioning with chef
+neither mocha is required.
+contest is not required anymore.
+minitest is not required anymore.
+tabs -> spaces
+check for empty chef_server_url and validation_key_path
+make chef zero lowercase in validation (conforms to other keys)
+replace biz@ with sales@ or support@
+consistently use "synced folders" terminology
+
+the terminology is "synced folders" not "shared folders" (presumably to
+avoid confusion with `vagrant share` which is something completely
+different).
+hosts/*: nfs prune regexp matches file paths [gh-3815]
+core: vagrant::util::keypair for generating keypairs
+hosts/linux: don't use sudo to write nfs if writable [gh-2643]
+core: load ".vagrantplugins" in root path [gh-3775]
+core: provisioners are defined differently now
+hosts/bsd: only use sudo if we can't write /etc/exports [gh-2643]
+core: call default_provider with the machine for commands
+core: environment#default_provider can look into machines
+core: prefer providers in the vagrantfile [gh-3812]
+provisioners/ansible: spare machine.ssh_info calls
+
+as a result of #4670 and the safe decision to not memoize
+machine.ssh_info (see 89a4a29d65cace4d970d0f220ad01815883ab8aa and
+5036d16461cfafde5274836d51b97740c23bd4eb), it is preferable to store the
+ssh_info hashes and avoid multiple function calls when generating the
+ansible inventory.
+core: call #state in any #action call [gh-4513]
+bundler 1.7.x
+commands/plugin: list puts plugin namein machine readable output
+[gh-4506]
+commands/up: if all machines autostart:false, start none [gh-4552]
+core: recognize more complex content types for json [gh-4525]
+core: retry download without continue if byte range not supported
+[gh-4479]
+provisioners/shell: rename shell_args to powershell-args
+rename windows guest without reboot
+command/rsync-auto: proxy vms work [gh-4067]
+commands/rsync: handle proxy machines [gh-4066]
+core: trigger machine_id_changed for reload [gh-3963]
+tune html minification
+use a dynamic year on template layouts
+vmware -> vmware
+memoize machine.ssh_info when ready for connection
+whitespace
+virtualbox does not support it either
+provide output on raising linuxmountfailed
+...missed to replace the device variable :-)
+hosts/windows: don't mount all drives into the rdp session
+
+this setting mounts all available drives (c:\ and mapped network
+drives) into the rdp session. this shouldn't be the default.
+allow nfs
+renamed host capabilities from opensuse to suse
+v1.6.5
+guests/ubuntu: enable the new mount_nfs stuff
+core: arbitrary nfs options with nfs_options [gh-1029]
+core: note backwards incompat in code
+core: support "mount_options" for arbitrary mount options [gh-1029]
+hosts/bsd: proper nfs prune sed syntax
+providers/virtualbox: only set default name on first up [gh-1817]
+provisioners/puppet: run from correct working directory [gh-1967]
+provisioners/salt: default bootstrap script gets latest
+kernel/v2: always forward ssh [gh-4437]
+providers/virtualbox: 4.2 max network adapters to 36 [gh-1886]
+providers/virtualbox: run post-boot after boot but before wait for ssh
+[gh-2048]
+core: set `disabled: true` for disabling forwarded port [gh-1922]
+provisioners/ansible: execute ansible with cwd of root_path [gh-2051]
+provisioners/chef: use subprocess to execute knife
+core: inherit commandunavailablewindows from commandunavailable
+communicators/ssh: handle closed connection without exception
+preserve disk image name
+
+detect and preserve the original name of the disk image rather than forcing it to be disk
+v1.6.4
+guests/redhat: set hostname on el7 [gh-4352]
+plugins/provisioners: put generated inventory file in vagrantfile dir
+provisioners/ansible: allow verbose :extra to be string
+grammar
+core: nitpick the protocol forwarded port checking
+more capabilities for openbsd guest
+ensure rsync_post has find permissions on smartos
+allow port-forwarding of the same port number but with different protocols [gh-1108]
+core: content-type is case insensitive for metadata check [gh-4369]
+core: vagrant provision triggers sentinel creation [gh-4393]
+support verify_vmware_hgfs in darwin guest.
+provisioners/ansible: properly quote vars with spaces [gh-1984]
+commands/provision: don't advertise parallel [gh-4398]
+guests/linux: more verbose output when shared folder mount fails
+[gh-4403]
+preserve exit code while using pseudo-terminal hack.
+scrub ssh pty output to filter out command echo-ing.
+plugins/provisioners/ansible: rename inventory_file to inventory_path
+
+/cc @ches
+plugins/provisioners/ansible: use exist? check
+
+/cc @ches
+ensure all assets are served over ssl
+clarified windows guest machine support.
+
+done at mitchellh's request.
+v1.7.4
+tabs must die.
+forcing eth0 to come up
+make slaves connecting to first node
+lvp for coreos guest support
+start padding with 25 characters to keep original behavior
+use longest machine name to pad in status cmd
+hosts/linux: sudo to copy back to exports [gh-5957]
+powershell and cmd calls should use commnand_executor to reuse oprn winrm shell
+use ntlm/negotiate authentication over basic authentication
+v1.2.7
+show the correct installed plugin [gh-1834]
+provide a custom user agent header to curl request so that url shorteners are able to track the amount of downloads
+use ssl and https links where appropriate
+tabs to spaces
+unnecessary '!'
+convert hostpath to string on windows so gsub works
+v1.2.6
+v1.2.5
+display post install messages if a plugin has any
+fallback to /tmp if $tmpdir is not set
+guests/fedora: don't fail if nmcli doesn't exist on the guest
+backslash-escape `*` character.
+replace '\' with '/' on synced folders on windows
+v1.7.3
+targeting scripts
+use the same ssh args for ssh with a command as ssh exec
+v1.7.3
+mount nfs with udp protocol by default [gh-1706]
+discover and set ssh_auth_sock on sudo with forward agent [gh-1307]
+vboxmanage customizations can run at different events [gh-1247]
+validation so private network ip doesn't end in .1 [gh-1750]
+nfs request is silently ignored on windows [gh-1748]
+retry ssh on enetunreach [gh-1732]
+box_download_insecure to not validate https of box_url [gh-1712]
+forwarded ports don't auto-correct by default [gh-1701]
+shared folder target path can be a windows path [gh-1688]
+freebsd: use quotes around hostname in rc.conf
+
+use double quotes around the hostname value in /etc/rc.conf
+grammar
+properly determine shared folder path even if .profile echos [gh-1677]
+don't forcibly output newlines for provisioners
+comment
+vagrant help <foo> works [gh-1578]
+specify gem license
+vagrant_dotfile_path [gh-1524]
+register fedora host as centos too [gh-1394]
+ignore ruby managers
+default vm name for virtualbox contains vagrantfile vm name [gh-1281]
+nfs allows access from all networks on vm [gh-1204]
+remote commands show output when fails [gh-1203]
+use 32-bit integer for nfs fsuid for older kernels [gh-1127]
+shared folder inheritence doesn't overwrite multi-vm [gh-1935]
+bump to latest bundler
+use bundle exec
+try the container vms
+prefix with guest_
+nfs exports with wrong casing on case-insensitive work [gh-1202]
+method for getting the case-correct path of a path [gh-1202]
+v1.2.4
+no longer need subprocess wrapping there :)
+reset the original environment if we are running something outside of the installer
+use safeexec to capture history keys in powershell command
+v1.8.1
+whitespace
+core: avoid crash case with nil [gh-6730]
+core: do not convert drive letters to unc paths [gh-6598]
+nfs exports with single quotes now work properly [gh-1166]
+commands/up: take into account forced provider
+core: use env var for bundle retries [gh-6705]
+close ssh channel after exit status received [gh-603]
+convert env values to strings before escaping
+synced_folders/rsync-auto: don't crash if rsync command fails [gh-4991]
+support for chef solo environments, upcoming in chef 11.6
+forward ports can specify host/guest ip to bind to [gh-1121]
+expand symlinks for nfs host path [gh-1101]
+vagrant destroy exits with 1 if any confirmation are declined [gh-923]
+v.use_linked_clone should be v.linked_clone
+synced_folders/rsync: command help [gh-5868]
+synced_folders/nfs: verify_installed option [gh-5269]
+synced_folders/rsync: can set rsync_path [gh-3966]
+kernel/v2: customizable sudo_command [gh-5573]
+exported sub-directories of exported nfs dirs works on bsd [gh-785]
+v1.2.3
+kernel/v2: make provisioner name show up on invalid [gh-5902]
+core: don't prepare folders in disable ode
+guests/tinycore: more robust rsync install
+communicators/ssh: only try auth methods that are valid
+v1.8.0
+pin edit this page to footer
+mobile nav back in
+#6674 cfengine provisioner broken on debian (http > https)
+core: if interrupted, don't open metadata file
+correct 'exits' to 'exists'
+generate ansible_hosts file if one is not provided
+updating provisioner to use latest bootstrap script
+commands/rdp: support username param [gh-5460]
+core: ssh private_key_path overwrites insecure key [gh-5632]
+bind default ssh to 127.0.0.1 [gh-1785]
+validate an ip is given for a private network [gh-1788]
+read_ip_address linux cap only reads ip of first device [gh-1799]
+set arpcheck=no as an environment variable with doing ifup #921
+provisioners/ansible(both): minor tweak in en.yml
+
+related to #3539.
+core: retry ssh keygen on rsaerror [gh-5056]
+
+/cc @sethvargo
+core: actually get the proper encoded subprocess command [gh-5128]
+provisioners/file: validate source relative to vagrantfile path
+[gh-5252]
+commands/ssh_config: output machine readable output
+core: machine output provider info for the machine
+push/atlas: atlas_token env var works [gh-5489]
+parse and insert group variables into the generated inventory.
+rewrite red hat nfs caps based on systemd checks
+use the extended password parameter, more compatible
+whoops - don't comment that out
+
+/cc @mbrodala
+allow specifying the guest port search
+return nil if the vm is not running when looking at forwarded ports
+install vb 5.0.10
+use the new presence helpers in the chef provisioner
+making the fedora guest detection search string generic
+
+signed-off-by: lalatendu mohanty <lmohanty@redhat.com>
+providers/hyper-v: support more than one nic [gh-4346]
+synced_folders/smb: use cred files [gh-4230]
+core: file:/// for windows paths [gh-5288]
+core: catch einval on setting env vars [gh-6017]
+core: assume all windows shells now have ttys
+core: more heuristics for determining cygwin
+switch back to hashicorp/precise64
+bundler, not bundle
+typo
+trailing comma
+use hostnamectl to set the hostname on ubuntu vivid 15.
+mounting to paths where user has no write permissions (e.g. /)
+salt-bootstrap.sh: options are only allowed before install arguments
+provisioners/shell: s/unless/if !/
+core: validate box_download_ca_cert_file, expand
+core: output available commands in machine-readable
+provisioners/chef: validate environments path [gh-2381]
+guests/redhat: dhcp_hostname set to hostname [gh-2441]
+provisioners/ansible: use the first private key
+
+/cc @gildegoma - does ansible support multiple private keys? vagrant
+now does, so this isn't exactly safe.
+sometimes, ifdown is not enough.
+provisioners/puppet: manifests path can be in the vm [gh-1805]
+core: allow multiple private keys [gh-907]
+provisioners/puppet: make the output a bit clearer
+provisioners/shell: allow array args [gh-1949]
+core: only look for global flags before "--" [gh-2491]
+guests/linux: emit upstart event for vagrant mounted if avail [gh-2502]
+providers/virtualbox: some validation around internal networks
+providers/virtualbox: internal networks [gh-2020]
+core: allow hooking around provisioner runs
+
+/cc @fgrehm - :) i think you'll understand.
+core: allow custom callables in hooks
+core: expose the hook method from the env
+communicators/ssh: pty can be enabled
+commands/box: list has machine-readable output
+core: use openssh for ssh exec
+core: enable ssh compression for `vagrant ssh`
+core: allow env access in plugin loaded middleware
+providers/virtualbox: get rid of some 4.3 global state
+core: output when resuming box download
+core: don't make all downloads continuable
+core: output synopsis with command [gh-2249]
+synced_folders/nfs: specify nfs_udp false to disable udp [gh-2304]
+core: don't load vagrantfile on plugin command
+providers/virtualbox: retry suspended check [gh-2479]
+core: verify explicit sf types are usable
+kernel: handle new nfs types
+providers/virtualbox: make sure sf host paths are strings
+providers/virtualbox: don't use nfs middleware anymore
+core: syncedfolders middleware passes inoptions
+providers/virtualbox: use new syncedfolders middleware
+make salt bootstrap work on systems without python
+typo!
+commands/box: read box url and downloaded date from json
+core: persist box url and download date into a json file under boxes directory
+core: get rid of code that deals with box info on a separate statefile
+commands/box: list base box downloaded url and datetime when `-i` gets provided to `box list`
+commands/box: extract a base class for dealing with statefile instantiation
+core: write box information after download
+commands/box: introduce a statefile for keeping track of downloaded boxes
+core: scaffold an action for persisting box information
+core: allow hooking before and after provisioners
+store the final `provision_enabled` value to env
+
+let other middleware actions to know if we are really going to run the
+provisioners.
+compatibility with rubygems 2.x
+automatically enable symlinks on vboxsf for virtualbox 4.1 (see #713 and 387692f9c8fa4031050646e2773b3d2d9b2c994e).
+allow owner & group to be supplied as an integer and skip lookup
+hosts/gentoo: use subprocess machinery
+
+/cc @timgus
+v1.3.5
+providers/virtualbox: support virtualbox 4.3 [gh-2374]
+use old name instead of hard coded 'precise64'
+comma typo
+describing the usage of protocols for forwarded network ports.
+hostname and fqdn should be done in one line
+detect red hat enterprise linux 4 and oracle linux
+rename host plugin (fedora to redhat)
+v1.3.4
+core: defined action hook names can be strings, convert to symbols
+resolving #2194 (ansible buffering output if run as subprocess)
+provisioners/ansible: convert extra vars to strings [gh-2244]
+providers/virtualbox: don't touch dyld_* anymore.
+
+subprocess handles this
+guests/linux: fail after a number of attempts
+guests/linux: only successful mount if exit status 0
+core: unset dyld_library_path if setuid/setgid [gh-2243]
+core: don't output \e[0k on windows [gh-2246]
+dont replace windows newlines to unix if shell is set as binary
+v1.3.3
+core: set the dyld_library_path before other env vars
+v1.3.2
+core: vagrantfile must be file [gh-2216]
+provisioners/ansible: default output level is verbose [gh-2194]
+providers/virtualbox: more robust lookup for vboxmanage on win
+not sure how this happens but travis told us so
+core: expand windows short paths
+commands/box: don't halt on metadata download failure [gh-6453]
+core: sleep between state checks for communicator [gh-2163]
+core: convert fp ports to ints [gh-2173]
+core: report the proper invalid state when waiting for the guest machine to be ready
+clarification: don't -> shouldn't
+core: allow strings to be used when checking for guest capabilities
+guests/linux: posix sed [gh-6104]
+core: when packaging, preserve generated key [gh-5780]
+use the correct option for sending the environment
+use an array instead of map
+hosts/arch: correct variable for nfs exports [gh-2161]
+ansible: support three available verbosity levels
+v1.3.1
+guests/coreos: proper guest ip detection [gh-2146]
+allow chef to install on windows
+core: vagrant_vagrantfile affects only project vagrantfile [gh-2130]
+core: dup option hashes everywhere
+core: dup the synced folder options [gh-2134]
+core: exec with the proxy command if specified
+provisioners/all: report proper invalid keys [gh-2117]
+ignore only root vagrantfile
+clarify statement on role files with chef-solo
+only ignore the root gemfile.lock
+safer way to display edit this page link
+core: more robust windows admin check [gh-5616]
+guests/fedora: use peerdns=no in static [gh-2111]
+provisioners/shell: prefer "." over "::"
+
+/cc @fgrehm
+core: vagrant -v no longer loads vagrantfile
+core: vagrant.has_plugin? to check if plugin installed [gh-1736]
+commands/up: validate provision-with args [gh-1957]
+commands/reload: dont' provision by default
+core: don't make dotfile path if no vagrantfile
+communicators/ssh: more nil guards [gh-6225]
+providers/virtualbox: run provisioners on suspend resume
+core: don't provision after first `up` by default [gh-1776]
+core: don't do head request for box on non-http [gh-5477]
+core: avoid locking in trap context
+clarify guest to host in forwarded port output [gh-4796]
+check if the network manager is before reloading
+rename to powershell_elevated_interactive
+commands/up: use sets
+commands/powershell
+provisioners/ansible_local: align console outputs
+
+use "info" level for main tasks (installing ansible, running galaxy,
+running playbook).
+use "detail" level for subsequent details.
+commands/up: automatically install providers
+environment can_install_provider and install_provider
+use unc paths for shared folders on windows host
+use unc paths for shared folders on windows host
+hosts/windows: install virtualbox
+hosts/darwin: support virtualbox install
+commands/provider
+#5186: warning: authentication failure. retrying... after packaging box
+providers/virtualbox: if no box, don't import the master
+providers/virtualbox: make prepare clone a core thing
+providers/virtualbox: unify import/clone
+providers/virtualbox: copy ssh key
+providers/virtualbox: discard state if cloning
+kernel/v2: box is optional if clone is set
+providers/virtualbox: clone
+providers/virtualbox: some progress
+providers/virtualbox: cloning can do a non-linked clone
+noop
+kernel/v2: clone option
+providers/virtualbox: ability to customize linked clone snapshot
+commands/cap: require_relative
+commands/snapshot: use require relative
+commands/cap
+providers/virtualbox: v4.2 and 4.3 support
+commands/snapshot: push now uses caps to be more resilient
+providers/virtualbox: use caps for snapshot list
+commands/snapshot: push and pop
+commands/snapshot
+support bundler 1.10.6
+providers/virtualbox: more support
+providers/virtualbox: vb5 support
+providers/virtualbox: ipv6 host only networks
+bump vmware information
+core: duplicate url array when authing so we don't mess up original
+core: boxmetadata supports checksums
+core: box urls can be authenticated by hooking
+providers/hyperv: set the hostname
+synced_folders/smb: higher priority than things like nfs and rsync
+providrs/hyperv: ask for the vswitch to use
+providers/hyperv: disable parallelism
+core: expand isstate to support inversions
+providers/hyperv: suspend/resume
+providers/hyperv: that synced folder stuff can go
+synced_folders/smb: basically working
+providers/hyperv: clone the disk
+providers/hyperv: enable provisioning
+providers/hyperv: wait for communicator on boot
+providers/hyperv: wait for ip on boot
+providers/hyperv: use handlebox middleware
+providers/hyperv: destroy
+providers/hyperv: more checks on machine import
+providers/hyperv: shuffle things around
+synced_folders/nfs: unavailable on windows
+communicators/ssh: call ready? when waiting
+
+this lets things like the ssh key go in
+hosts/bsd: make directories unique when exporting
+core: re-ask if confirmation bad input [gh-3027]
+core: default url will be https
+ansible: generate inventory in .vagrant/...
+hosts/linux: escape regular expression for prune nfs exports [gh-2934]
+core: if can't communicate, force halt right away
+avoid locking in trap context
+core: disable parallelization if only one action
+core: copy all sub-directories in a box properly
+
+this avoids an errno::eacces on windows, although i'm really unsure why.
+more robust coreos checking
+providers/virtualbox: only clear forwarded ports if there are any
+communicators/ssh: more verbose output about waiting for ssh
+core: keep process group for ssh childprocess
+providers/virtualbox: cap to read forwarded ports
+up childprocess dep to 0.4.1
+guests/linux: public key insertion is more robust
+
+contents can have newlines (or not)
+core: make sure any subprocess exits no matter what
+core: poll for process exit on ssh#exec with subprocess
+core: handlebox keeps the same machine instance
+core: machine can set box
+core: machine#with_ui
+core: handlebox reloads machine from proper vagrantfile
+core: when loading box metadata, specify json header
+core: request json type when getting the metadata url
+core: download metadata with json accept header
+core: machine has reference to vagrantfile
+core: vagrantfile#machine_config returns more info now
+core: vagrantfile class now adheres to box_version
+core: environment uses the new vagrantflie class
+ensure options[:mount_options] is defined before checking if it includes key
+core: handle native windows paths like 'c:\foo.box'
+
+[gh-2081]
+core: set url to opaque if there is no path
+core: output a newline after ask with no echo
+core: output what we're updating and what we're not
+providers/virtualbox: check for outdated on any start
+core: get rid of unnecessary lines
+core: boxcheckoutdated only runs if told to
+core: boxcheckoutdated checks locally
+core: boxcheckoutdated can check if a box is outdated
+commands/box: outdated command to find outdated boxes
+core: box can store a metadata url
+providers/virtualbox: use new handlebox middleware
+core: catch enoent as not a metadata url
+core: boxadd expands url paths
+core: boxadd supports multiple urls properly
+core: handlebox reloads the box
+core: use symbol names for providers everywhere
+core: handlebox works with metadata boxes
+core: output the expanded url
+core: don't prefix ask statements
+core: ask what provider to use if multiple providers
+core: boxadd uses the proper path on unix
+core: boxadd now works with http urls
+core: boxadd checks if box already exists for metadata
+
+unless force
+core: boxmetadata can read the json description
+guests/linux: don't chown vb shared folders if readonly [gh-2442]
+guests/openbsd: ensure that `pkg_path` is set when installing rsync
+
+depending on the shell, `pkg_path` is not necessarily set when vagrant
+runs `pkg_add`.
+
+ref: gh-2917
+kernel/v2: support merging properly
+guests/openbsd: openbsd is not a linux derivative
+kernel/v2: allow ips to end in ".1" [gh-2914]
+ansible generated inventory: skip group variables
+
+except ':children' for groups of groups, it is safer to avoid generating
+':suffix' blocks. at the moment ansible only supports (but doesn't
+recommend) group variables (:vars), and the vagrant ansible provisioner
+won't support this way to define variables.
+core: force bundler usage if in installer
+core: execute the specified vagrant executable in pre-rubygems.rb
+provisioners/file: expand destination path if capable
+core: only load default and plugin bundler groups to avoid dev deps
+core: provider capabilities
+core: clear line with \033[k
+core: if synced folder type is blank, use default
+core: get rid of more references to scope, old terminology
+hosts/redhat: recognize korora [gh-2869]
+core: only bold when output is part of a machine
+hosts/gentoo: more robust check for systemctl path on gentoo
+core: make output white for now
+core: convert more output to `output` method
+providers/virtualbox: more detailed output
+providers/virtualbox: many `detail` level output
+core: align text and make sure its all lined up with prefixes
+core: within a bundler env, don't manage bundler
+core: seperate out io util helper
+core: default a value to avoid potential exception in sshrun
+guests/tinycore: tinycore linux support
+synced_folders/rsync: output directory under watch for rsync-auto
+synced_folders/rsync: make sure host path ends in "/"
+core: dont' load rc or profile when getting a cygpath with bash
+synced_folders/rsync: convert path to cygpath on windows
+synced_folders/nfs: don't nfs_prune on hosts that don't support it
+providers/virtualbox: retry list hostonlyifs [gh-2831]
+synced_folders/nfs: register `nfs_client_install` caps to correct distros
+core: respect vagrant_home everywhere
+
+use `vagrant_home`env var also for `plugin::manager` etc., not only in
+the `environment` class.
+more specific solaris 11 detection
+synced_folders/rsync: rsync-auto command
+core: interrupt in cli exits with 1
+synced_folders/rsync: expand host paths relative to root path
+synced_folders/rsync: `vagrant rsync` syncs the folders
+hosts/bsd: use util::which instead of system("which")
+hosts/bsd: don't execute shell for sudo commands [gh-2808]
+commands/list-commands: lists all commands primary and non-primary
+core: default commands to primary
+core: non-primary commands aren't shown in basic `vagrant -h`
+core: allow command plugins to have options
+provisioners/chef: don't follow symlink when chown
+synced_folders/rsync: warn if password auth
+synced_folders/rsync: output what is being excluded
+synced_folders/rsync: can exclude files
+synced_folders/rsync: allow guests to execute things before
+synced_folders/nfs: always prune [gh-2738]
+extend virtualbox convenince methods
+
+in the vein of #2426, i too can never remember syntax, and end up
+hunting for either an exisiting vagrantfile or starting to dig up
+details.
+core: only check for box existence if not force [gh-2757]
+core: batchaction should handle forks [gh-2756]
+v1.6.3
+guests/linux: properly quote and insert public key
+core: has_plugin? uses the new plugin manager class to check for gems
+hosts/null: needs to accept env as param
+hosts/windows: convert
+many more hosts converted
+hosts/freebsd: convert
+provisioners/puppet: run in elevated mode on win guests
+convert more hosts: arch and linux
+core: pass environment into all host caps
+core: whitespace
+core: pass extra args to detect? when detecting capability host
+commands/plugin: vagrant plugin install can accept multiple
+allow `vagrant (un)install plugin1 plugin2 plugin3`
+hosts/windows: use subprocess to execute mstsc [gh-3837]
+core: installing a plugin from a gem doesn't constrain it
+kernel/v2? more clever: default port to guest port
+kernel/v2: default ssh port to 22
+commands/rdp: avoid rdp_info being nil
+commands/rdp: rdp_info cap if avail [gh-3832]
+communicators/winrm: use winrm_info cap if available [gh-3832]
+hosts/linux: rdp_client cap [gh-3845]
+providers/virtualbox: check vbox_msi_install_path on win [gh-3852]
+core: don't port collision detect udp [gh-3859]
+communicators/winrm: don't look up forwarded port if non-local [gh-3861]
+synced_folders/rsync: dup arg list [gh-3864]
+allow forcing plugins with vagrant_force_plugins
+core: when installig local plugins, don't fetch remote
+core: generate bogus gemfile so that a random lockfile isn't loaded
+commands/plugin: support installing from file
+core: reset the specification lookup when isolating gems
+allow defining of <install-type> and <install-type-args>
+core: whoops, don't print gemfile
+core: statefile can track sources, not sure if we'll use it though
+guests/darwin: respect nfs mount options [gh-3791]
+commands/plugin: convert all actions to use the new classes
+core: cygwin_path only uses cygpath in cygwin [gh-3804]
+synced_folders/rsync: rsync__chown [gh-3810]
+core: waitforcommunicator always asks for state
+
+this forces global-status to be up-to-date typically
+redirect output of mkdir statement to out-null in bootstrap-salt.ps1
+core: plugin::manager.installed_specs doesn't use bundler
+commands/halt: halt in reverse order [gh-3790]
+don't load plugins again on `vagrant plugin` commands
+commands/plugin: uninstall works again
+put plugins in their own gemfile group so we can load on their own
+guests/freebsd: properly register that the rsync_pre capability belongs to freebsd rather than defining re-defining it for linux.
+load with bundler context
+installing gems works
+commands/plugin: list uses pluginmanager
+commands/plugin: list plugins uses bundler
+v1.6.2
+core: vagrant.require_plugin is gone
+commands/plugin: allow within bundler env (cause we always are)
+warn if running in a bundler env, don't load plugins
+use bundler to load plugins
+communicators/ssh: if insert_key is false, don't insert a key
+guests/linux: exclude symlinks from chown search [gh-3744]
+core: providers can choose to not be defaultable [gh-3742]
+communicators/ssh: rescue another exception for reset
+insert_public_key cap, and use that if it exists
+core: raise exceptions if they happen in waitforcommunicator threads
+core: warn if password only on `vagrant ssh`
+communicators/ssh: support passwords
+core: accept passwords in ssh_info
+core: retry acquire of dotlock [gh-3735]
+synced_folders/rsync: copy symlinks as real files [gh-3734]
+provisioners/chef: synced_folder_type
+provisioners/puppet: synced_folder_type [gh-2709]
+synced_folders/nfs: allow disabling export [gh-3636]
+kernel/v2: automatically forward winrm if comm is winrm [gh-3685]
+kernel/v2: convert network type to symbol earlier
+v1.4.3
+detect fedora 19 and 20
+:fireworks: new year! :fireworks:
+core: properly yield in locker
+core: don't lock machines on ssh access
+v1.4.2
+core: undo last for now
+kernel/v2: hostnames can be one character [gh-3713]
+core: warn if no provider is specified that we can't check for it
+core: re-arrange some code to make things easier to read later
+synced_folders/nfs: lock around sudo input [gh-2680]
+core: ctrl-c no longer raises trap-context exception
+v1.6.1
+communicators/winrm: good_exit option
+hosts/bsd: check exports only if exports file exists [gh-2714]
+core: handle eoferror when checking checksum [gh-2716]
+commands/reload: if --provision is present, force provision [gh-3657]
+set default value to avoid a prompt
+synced_folders/rsync: mkdir before rsync
+core: no active machines if there is no vagrant env
+guests/mint: don't need to inherit from ubuntu class
+guests/linux: emit upstart event on virtualbox using the expanded path
+core: vagrant.has_plugin? tries to match gem name first
+
+search primary from the list of gem names which have been loaded by
+`vagrant.require_plugin`. fall back to matching registered plugin names.
+v1.6.0
+don't wrap the escaped password in single quotes.
+v1.4.1
+guests/linux: up the amount of retries for nfs mounts
+core: environment#cwd should expand path to full path
+providers/virtualbox: higher priority than default
+providers/hyperv: lower priority for windows
+use 'tee' to write to /etc/exports
+providers/virtualbox: don't do transient by default
+guests/debian: setting hostname works without 127.0.1.1 [gh-3271]
+guests/linux: lang=en for ifconfig [gh-3029]
+providers/hyperv: vagrant ssh_run action [gh-3615]
+commands/ssh: use proper variable
+providers/virtualbox: don't clear /etc/exports on bsds for nfs [gh-2645]
+core: sshrun uses new shellquote util
+core: put shell quoting into its own util class, it is useful
+core: -t/-t work for vagrant ssh -c [gh-2618]
+check usability of nfs on host
+core: show message when checksumming box [gh-3623]
+mention that the "url" can also be a file path
+reverse order of two box components
+
+the metadata is optional whereas the box file is required, so it makes
+sense to list the box file first.  it's also easier on the reader's
+brain to start with the more obvious and easily understandable item
+(which they'll probably be expecting to read about anyway) and save
+the more surprising item till later.
+core: box removal of a v1 box works
+use monospace for technical terms where appropriate
+core: allow insecure rubygems for plugins [gh-3610]
+core: dup the provider options so we can't overwrite them
+core: can exclude providers
+core: default provider chosen by usability and prority
+core: provider has default priority of 5
+default the winrm shell provisioner to privileged (elevated)
+privisoners/salt: proper bootstrap url [gh-3583]
+handle a lot of todos
+removing some old files
+scripts: calculate shasum
+v1.4.0
+scripts: bintray upload
+whitespace
+providers/virtualbox: resume should wait for boot
+provisioners/puppet: use unique directory for each definition
+provisioners/chef: support proper counter for multiple chefs
+provisioners/shell: array args properly work
+providers/virtualbox: no ssh info if not running
+whitespace
+providers/virtualbox: only clear shared folders if we have a vm
+chef provisioner should utilize reboot capability
+allow winrm commands to be run elevated via scheduled task
+don't use interpolated strings for username and password
+
+its possible that usernames and passwords may contain special characters like $
+commands/plugin: ignore default gems when pruning
+
+for modern rubygems compatibility
+extract execution_output method from winrm comm execute
+guests/linux: --no-wait on emit [gh-2564]
+core: environment_loaded doesn't load full env
+commands/global-status: call proper method
+core: do proper type conversions for box checksum types
+core: environment#action_runner sets machine_index
+core: check for ruby 2.0
+synced_folders/nfs: can say functional is false explicitly
+communicators/winrm: reload shell on reload so we get proper port
+kernel/v2: make sure communicator is a symbol
+very quiet mode for development
+guests/linux: unmount uses rmdir instead of rm -rf to avoid catastrophe
+core: fp collision leaser should compare ints
+provisioners/*: prefix the output
+core: lock around machine actions
+command/rsync-auto: work with provisioner synced folders
+core: a function for diffing synced folders
+core: port collision detector can swap open port checker
+core: nicer way to assure array for pviate key path
+core: when disabling, only disable the proper folders
+core: syncedfolders middleware saves what it synced
+core: machine#action_raw for calling raw callables
+providers/virtualbox: synced folder supports the "disable" method
+synced_folders/nfs: acquire process-level lock for export
+core: machineindex sets paths to nil if empty
+core: batchaction can run arbitrary code
+core: environment#lock is more useful now
+core: machineindex#vagrant_env should silence warnings
+core: use the machineindex#vagrant_env method
+core: machineindex keeps track of vagrantfile name
+machineindextest
+commands/rdp: nicer output
+hosts/windows: use the port when connecting
+commands/rdp: no need fo rthe guest cap
+guests/windows: detect the port for rdp
+guests/windows: use the public_address cap
+guests/windows: rdp_info cap
+commands/rdp: execute propre capabilities
+hosts/windows: rdp_client cap
+commands/rdp: basic skeleton
+provisioners/chef: reinit net shares on windows guests
+note provisioners that don't work on windows guests
+provisioners/puppet: execute properly with winrm
+privisioners/puppet: wait for reboot on windows
+privisioners/shell: wait for reboot if we can
+provisioners/shell: friendly output if winrm shell provisioning
+provisioner/shell: proper extension on temporary file
+provisioners/shell: handle comm output in a uniform way
+privisioners/shell: execute windows script
+provisioners/shell: don't replace windows lineendings for winrm
+provisioners/shell: cause provision_winrm if winrm
+core: generalize the autostart stuff so we don't have a bunch of specials
+core: check if provider is usable when requesting a machine
+core: provision "once" or "always" [gh-2421]
+core: can specify a "post_up_message" [gh-1968]
+core: silence ruby warnings when loading external machines
+core: machineindex is enumerable
+core: environment#machine_index
+core: replace "-" in uuids with ""
+core: basic machineindex class, starting point
+communicators/winrm: autodetect port based on forwarded ports
+v1.5.4
+command/rsync-auto: proper require
+commands/box/list: doesn't trigger vagrantfile loading
+providers/hyperv: provision action [gh-3494]
+guests/linux: rsync chown if either user or group incorrect [gh-3485]
+synced_folders/rsync: force nio4r_pure
+v1.5.3
+core: use process.alive? to avoid exceptions
+commands/box/repackage: works with new stuff [gh-3372]
+core: all symlinks for synced folders are expanded [gh-3444]
+communicators/ssh: throttle warnings [gh-3442]
+print message and exit rsync-auto immediately if there is nothing to watch.
+communicators/ssh: only show warnings after a few attempts [gh-3442]
+core: no need to map! here
+nitpick on messaging
+guests/linux: rsync chown group if owner now set [gh-3223]
+guests/linux: smb mounts with symbol passwords work [gh-3202]
+no, we really need listen 2.7.1
+command/rsync-auto: use newer listen gem [gh-3249]
+providers/hyperv: verify cmdlet is available [gh-3398]
+encapsulate path for smb powershell script
+a simple typo
+kernel/v2: check if type is set before validation
+v1.5.2
+templaterenderer can take a new root [gh-3231]
+synced_folders/smb: verify powershell v3 is running or later [gh-3257]
+synced_folders/rsync: set chmod flag by default on windows [gh-3256]
+core: outdated check checks local boxes [gh-3321]
+core: lock prerelease gems
+kernel/v2: allow private network type to be a string [gh-3349]
+guests/debian: don't return from block [gh-3283]
+commands/status: target for machine readable [gh-3218]
+v1.5.1
+guests/linux: check for proper owner [gh-3186]
+guests/linux: rsync only chown if invalid user/group [gh-3186]
+core: vagrant help no longer loads vagrantfile
+core: downloads with user/pass use curl -u flag [gh-3183]
+kernel/v2: validate forwarded ports [gh-3187]
+providers/virtualbox: import progress works on windows
+core: execute powershell scripts even with spaces in dir [gh-3100]
+synced_folders/rsync: don't watch excluded paths [gh-3159]
+synced_folders/rsync: execute rsync_post cap if it exists [gh-3163]
+providers/virtualbox: retry list vms [gh-2831]
+core: output when upgrading home path
+provisioners/ansible: request ssh info within provisoin [gh-3111]
+core: assume box isn't metadata if > threshold [gh-3107]
+smartos guest capabilities includes rsync_pre
+nit-picky grammer making it easier to read.
+core: einval is not a metadata url
+st3 vagrantfile syntax highlighting
+v1.5.0
+don't splat the bundler groups
+core: private boxes authenticate metadata box urls too
+ansible: re-enable controlpersist defaults when ansible_ssh_args is used
+
+solve problem discussed in [gh-2952]
+provisioners/shell: use detail level output for running
+core: cygwin path conversion must replace slashes first
+provisioners/salt: don't use exteranl deep_merge [gh-2348]
+provisioners/ansible: disable host key checking
+
+close #3060
+providers/hyperv: ssh_info doesn't need a dedicated action stack
+synced_folders/rsync: rsync__auto options
+synced_folders/rsync: allow custom args [gh-3070]
+providers/hyperv: public_address cap
+core: the provision sentinel should be backwards compatible
+synced_folders/smb: ask for creds in prepare
+synced_folders/smb: set recursive acl for folders
+core: packaging works again
+core: safer dup checks for synced folders
+commands/plugin: list notes system gems
+core: plugin manager marks system gems as system
+core: load system plugins if they are installed
+core: vagrant.installer_embedded_dir
+read box file in binary mode for checksum
+core: duplicate url array when authing so we don't mess up original
+pass in a message to the command as well
+pass metadata to push command
+clarified wording a little bit further
+finish that sentence
+verify the token is valid when saving
+v1.7.2
+provisioners/puppet: use predictable synced folders
+do not use keyword arguments for string keys
+use .key? instead of .has_key?
+env returns nil, not empty strings
+core: just don't use ** to avoid symbol/strings mixup
+
+/cc @sethvargo
+symbolize and stringify keys in options hash
+make parent directories when uploading to ftp
+expand file paths relative to the root_path
+exclude certain directories by default
+use 21 for the default port
+enable provision with --provision-with flag
+use new chef omnibus url
+sudoers example for fedora distros
+stub_env is a real helper now :)
+pushes are strings
+heroku is a paas not an iaas
+named provisioners only in v1.7.0
+mend
+commands/push: push strategy should be string
+v1.7.1
+winrm ssl support
+winrm ssl support
+just use ready?
+only forward one port for winrm
+vagrantfile is case sensitive on strict file sys
+core: don't encode! since string might be frozen
+hosts/bad: escape regexp properly [gh-4922]
+v1.7.0
+allow listen 2.8
+vagrant cloud -> atlas
+send the atlas token
+just return a symbol
+be consistent
+do not support multiple strategies right now
+infer push name when only one strategy is defined, support multiple strategies
+typo
+pushes/atlas: look for the uploader bin in the embedded dir
+separate local-exec push `script` from `inline`
+interpret the app from the cwd
+clarify what gets pushed
+load the translations in atlas
+allow = methods for include and exclude
+rename push environment to env
+pushes/harmony: use to_s.strip.empty? to check if app is set
+pushes/harmony: expand dir relative to vagrantfile root path
+pushes/harmony: stub i18n
+do not use unset_value in plugin (it uses components)
+collect push_configs in the plugin manager
+ignore options that come back from the plugin for now
+make environment#pushes its own method
+push does not have access to @machine
+do not use enumerable in registry
+
+calling methods like #first in registry is misleading because it returns
+a different result than registry.get(registry.keys.first).
+rename file push to noop push
+accept a list of options in #push signature
+provisioners/ansible: show ansible command when vagrant_log=debug
+force rm tempfiles (no rescue nil); use right var
+you need to press enter to migrate from 1.1 to 1.5
+typo
+automatically install chef when provisioning with chef
+neither mocha is required.
+contest is not required anymore.
+minitest is not required anymore.
+tabs -> spaces
+check for empty chef_server_url and validation_key_path
+make chef zero lowercase in validation (conforms to other keys)
+replace biz@ with sales@ or support@
+consistently use "synced folders" terminology
+
+the terminology is "synced folders" not "shared folders" (presumably to
+avoid confusion with `vagrant share` which is something completely
+different).
+hosts/*: nfs prune regexp matches file paths [gh-3815]
+core: vagrant::util::keypair for generating keypairs
+hosts/linux: don't use sudo to write nfs if writable [gh-2643]
+core: load ".vagrantplugins" in root path [gh-3775]
+core: provisioners are defined differently now
+hosts/bsd: only use sudo if we can't write /etc/exports [gh-2643]
+core: call default_provider with the machine for commands
+core: environment#default_provider can look into machines
+core: prefer providers in the vagrantfile [gh-3812]
+provisioners/ansible: spare machine.ssh_info calls
+
+as a result of #4670 and the safe decision to not memoize
+machine.ssh_info (see 89a4a29d65cace4d970d0f220ad01815883ab8aa and
+5036d16461cfafde5274836d51b97740c23bd4eb), it is preferable to store the
+ssh_info hashes and avoid multiple function calls when generating the
+ansible inventory.
+core: call #state in any #action call [gh-4513]
+bundler 1.7.x
+commands/plugin: list puts plugin namein machine readable output
+[gh-4506]
+commands/up: if all machines autostart:false, start none [gh-4552]
+core: recognize more complex content types for json [gh-4525]
+core: retry download without continue if byte range not supported
+[gh-4479]
+provisioners/shell: rename shell_args to powershell-args
+rename windows guest without reboot
+command/rsync-auto: proxy vms work [gh-4067]
+commands/rsync: handle proxy machines [gh-4066]
+core: trigger machine_id_changed for reload [gh-3963]
+tune html minification
+use a dynamic year on template layouts
+vmware -> vmware
+memoize machine.ssh_info when ready for connection
+whitespace
+virtualbox does not support it either
+provide output on raising linuxmountfailed
+...missed to replace the device variable :-)
+hosts/windows: don't mount all drives into the rdp session
+
+this setting mounts all available drives (c:\ and mapped network
+drives) into the rdp session. this shouldn't be the default.
+allow nfs
+renamed host capabilities from opensuse to suse
+v1.6.5
+kernel/v2: always forward ssh [gh-4437]
+v1.6.4
+guests/redhat: set hostname on el7 [gh-4352]
+ensure rsync_post has find permissions on smartos
+core: content-type is case insensitive for metadata check [gh-4369]
+core: vagrant provision triggers sentinel creation [gh-4393]
+commands/provision: don't advertise parallel [gh-4398]
+guests/linux: more verbose output when shared folder mount fails
+[gh-4403]
+preserve exit code while using pseudo-terminal hack.
+scrub ssh pty output to filter out command echo-ing.
+exit wit code 1 from powershell commands that fail but do not send an exit code
+write to stdout before exit 1
+changing default repo url.
+core: don't allow '/' in vm name [gh-4289]
+core: disallow brackets in vm names [gh-4319]
+core: don't load curlrc [gh-4328]
+commands/reload: show post-up message [gh-4168]
+core: box names with colons work on windows [gh-4100]
+vagrantfile for vagrant dev [gh-4089]
+core: guard against ssh to localhost:22 [gh-4070]
+core: lock machine action on vf name too [gh-4065]
+core: machine#reload
+core: preserve downloaded file in more cases [gh-4301]
+guests/nixos: don't detect as windows [gh-4302]
+provisioners/puppet: don't repeat output when prov fails [gh-4303]
+provisioners/salt: use exit code to detect failure [gh-4304]
+provisioners/salt: whitespace
+provisioners/chef: put global lock around knife exec
+rsync on smartos should use pfexec
+subprocess: respect listeners on final yield
+accept vhd as well as vhdx file types on hyper-v
+encode string representation of environment object for seamless printing
+ensure virtualbox virtual disks are stored in the correct directory round 2
+ensure virtualbox virtual disks are stored in the correct directory on windows hosts
+virtualbox driver should replace only last occurence of suggested vm name.
+note that rsync__args ownership options aren't used.
+link to the basic options page for owner and group.
+avahi not needed
+don't output stdout and stderr twice when shell provisioner fails
+
+[gh-4086]
+v1.6.3
+make sure c:\tmp\ exists before downloading salt installer
+provisioners/puppet: run in elevated mode on win guests
+hosts/windows: use subprocess to execute mstsc [gh-3837]
+kernel/v2? more clever: default port to guest port
+kernel/v2: default ssh port to 22
+commands/rdp: avoid rdp_info being nil
+commands/rdp: rdp_info cap if avail [gh-3832]
+communicators/winrm: use winrm_info cap if available [gh-3832]
+hosts/linux: rdp_client cap [gh-3845]
+providers/virtualbox: check vbox_msi_install_path on win [gh-3852]
+core: don't port collision detect udp [gh-3859]
+communicators/winrm: don't look up forwarded port if non-local [gh-3861]
+synced_folders/rsync: dup arg list [gh-3864]
+guests/darwin: respect nfs mount options [gh-3791]
+core: cygwin_path only uses cygpath in cygwin [gh-3804]
+synced_folders/rsync: rsync__chown [gh-3810]
+core: waitforcommunicator always asks for state
+
+this forces global-status to be up-to-date typically
+redirect output of mkdir statement to out-null in bootstrap-salt.ps1
+commands/halt: halt in reverse order [gh-3790]
+guests/freebsd: properly register that the rsync_pre capability belongs to freebsd rather than defining re-defining it for linux.
+v1.6.2
+guests/linux: exclude symlinks from chown search [gh-3744]
+core: providers can choose to not be defaultable [gh-3742]
+communicators/ssh: rescue another exception for reset
+core: retry acquire of dotlock [gh-3735]
+synced_folders/rsync: copy symlinks as real files [gh-3734]
+synced_folders/nfs: allow disabling export [gh-3636]
+kernel/v2: automatically forward winrm if comm is winrm [gh-3685]
+kernel/v2: convert network type to symbol earlier
+core: properly yield in locker
+core: don't lock machines on ssh access
+kernel/v2: hostnames can be one character [gh-3713]
+v1.6.1
+communicators/winrm: good_exit option
+commands/reload: if --provision is present, force provision [gh-3657]
+synced_folders/rsync: mkdir before rsync
+core: no active machines if there is no vagrant env
+guests/mint: don't need to inherit from ubuntu class
+v1.6.0
+don't wrap the escaped password in single quotes.
+core: environment#cwd should expand path to full path
+providers/virtualbox: higher priority than default
+providers/hyperv: lower priority for windows
+use 'tee' to write to /etc/exports
+providers/virtualbox: don't do transient by default
+guests/debian: setting hostname works without 127.0.1.1 [gh-3271]
+guests/linux: lang=en for ifconfig [gh-3029]
+providers/hyperv: vagrant ssh_run action [gh-3615]
+check usability of nfs on host
+core: show message when checksumming box [gh-3623]
+mention that the "url" can also be a file path
+reverse order of two box components
+
+the metadata is optional whereas the box file is required, so it makes
+sense to list the box file first.  it's also easier on the reader's
+brain to start with the more obvious and easily understandable item
+(which they'll probably be expecting to read about anyway) and save
+the more surprising item till later.
+use monospace for technical terms where appropriate
+core: allow insecure rubygems for plugins [gh-3610]
+core: dup the provider options so we can't overwrite them
+core: can exclude providers
+core: default provider chosen by usability and prority
+core: provider has default priority of 5
+default the winrm shell provisioner to privileged (elevated)
+privisoners/salt: proper bootstrap url [gh-3583]
+handle a lot of todos
+removing some old files
+whitespace
+providers/virtualbox: no ssh info if not running
+whitespace
+chef provisioner should utilize reboot capability
+allow winrm commands to be run elevated via scheduled task
+don't use interpolated strings for username and password
+
+its possible that usernames and passwords may contain special characters like $
+extract execution_output method from winrm comm execute
+core: environment_loaded doesn't load full env
+commands/global-status: call proper method
+core: environment#action_runner sets machine_index
+synced_folders/nfs: can say functional is false explicitly
+communicators/winrm: reload shell on reload so we get proper port
+kernel/v2: make sure communicator is a symbol
+very quiet mode for development
+guests/linux: unmount uses rmdir instead of rm -rf to avoid catastrophe
+core: fp collision leaser should compare ints
+provisioners/*: prefix the output
+core: lock around machine actions
+command/rsync-auto: work with provisioner synced folders
+core: a function for diffing synced folders
+core: port collision detector can swap open port checker
+core: nicer way to assure array for pviate key path
+core: when disabling, only disable the proper folders
+core: syncedfolders middleware saves what it synced
+core: machine#action_raw for calling raw callables
+providers/virtualbox: synced folder supports the "disable" method
+synced_folders/nfs: acquire process-level lock for export
+core: machineindex sets paths to nil if empty
+core: batchaction can run arbitrary code
+core: environment#lock is more useful now
+core: machineindex#vagrant_env should silence warnings
+core: use the machineindex#vagrant_env method
+core: machineindex keeps track of vagrantfile name
+machineindextest
+commands/rdp: nicer output
+hosts/windows: use the port when connecting
+commands/rdp: no need fo rthe guest cap
+guests/windows: detect the port for rdp
+guests/windows: use the public_address cap
+guests/windows: rdp_info cap
+commands/rdp: execute propre capabilities
+hosts/windows: rdp_client cap
+commands/rdp: basic skeleton
+provisioners/chef: reinit net shares on windows guests
+note provisioners that don't work on windows guests
+provisioners/puppet: execute properly with winrm
+privisioners/puppet: wait for reboot on windows
+privisioners/shell: wait for reboot if we can
+provisioners/shell: friendly output if winrm shell provisioning
+provisioner/shell: proper extension on temporary file
+provisioners/shell: handle comm output in a uniform way
+privisioners/shell: execute windows script
+provisioners/shell: don't replace windows lineendings for winrm
+provisioners/shell: cause provision_winrm if winrm
+core: generalize the autostart stuff so we don't have a bunch of specials
+core: check if provider is usable when requesting a machine
+core: provision "once" or "always" [gh-2421]
+core: can specify a "post_up_message" [gh-1968]
+core: silence ruby warnings when loading external machines
+core: machineindex is enumerable
+core: environment#machine_index
+core: replace "-" in uuids with ""
+core: basic machineindex class, starting point
+communicators/winrm: autodetect port based on forwarded ports
+v1.5.4
+command/rsync-auto: proper require
+commands/box/list: doesn't trigger vagrantfile loading
+providers/hyperv: provision action [gh-3494]
+guests/linux: rsync chown if either user or group incorrect [gh-3485]
+synced_folders/rsync: force nio4r_pure
+v1.5.3
+core: use process.alive? to avoid exceptions
+commands/box/repackage: works with new stuff [gh-3372]
+core: all symlinks for synced folders are expanded [gh-3444]
+communicators/ssh: throttle warnings [gh-3442]
+print message and exit rsync-auto immediately if there is nothing to watch.
+communicators/ssh: only show warnings after a few attempts [gh-3442]
+core: no need to map! here
+nitpick on messaging
+guests/linux: rsync chown group if owner now set [gh-3223]
+guests/linux: smb mounts with symbol passwords work [gh-3202]
+no, we really need listen 2.7.1
+command/rsync-auto: use newer listen gem [gh-3249]
+providers/hyperv: verify cmdlet is available [gh-3398]
+encapsulate path for smb powershell script
+a simple typo
+kernel/v2: check if type is set before validation
+v1.5.2
+templaterenderer can take a new root [gh-3231]
+synced_folders/smb: verify powershell v3 is running or later [gh-3257]
+synced_folders/rsync: set chmod flag by default on windows [gh-3256]
+core: outdated check checks local boxes [gh-3321]
+core: lock prerelease gems
+kernel/v2: allow private network type to be a string [gh-3349]
+guests/debian: don't return from block [gh-3283]
+commands/status: target for machine readable [gh-3218]
+v1.5.1
+guests/linux: check for proper owner [gh-3186]
+guests/linux: rsync only chown if invalid user/group [gh-3186]
+core: vagrant help no longer loads vagrantfile
+core: downloads with user/pass use curl -u flag [gh-3183]
+kernel/v2: validate forwarded ports [gh-3187]
+providers/virtualbox: import progress works on windows
+core: execute powershell scripts even with spaces in dir [gh-3100]
+synced_folders/rsync: don't watch excluded paths [gh-3159]
+synced_folders/rsync: execute rsync_post cap if it exists [gh-3163]
+providers/virtualbox: retry list vms [gh-2831]
+core: output when upgrading home path
+provisioners/ansible: request ssh info within provisoin [gh-3111]
+core: assume box isn't metadata if > threshold [gh-3107]
+smartos guest capabilities includes rsync_pre
+nit-picky grammer making it easier to read.
+core: einval is not a metadata url
+st3 vagrantfile syntax highlighting
+v1.5.0
+don't splat the bundler groups
+core: private boxes authenticate metadata box urls too
+ansible: re-enable controlpersist defaults when ansible_ssh_args is used
+
+solve problem discussed in [gh-2952]
+provisioners/shell: use detail level output for running
+core: cygwin path conversion must replace slashes first
+provisioners/salt: don't use exteranl deep_merge [gh-2348]
+provisioners/ansible: disable host key checking
+
+close #3060
+providers/hyperv: ssh_info doesn't need a dedicated action stack
+synced_folders/rsync: rsync__auto options
+synced_folders/rsync: allow custom args [gh-3070]
+providers/hyperv: public_address cap
+core: the provision sentinel should be backwards compatible
+synced_folders/smb: ask for creds in prepare
+synced_folders/smb: set recursive acl for folders
+core: packaging works again
+core: safer dup checks for synced folders
+commands/plugin: list notes system gems
+core: plugin manager marks system gems as system
+core: load system plugins if they are installed
+core: vagrant.installer_embedded_dir
+read box file in binary mode for checksum
+core: duplicate url array when authing so we don't mess up original
+core: boxmetadata supports checksums
+core: box urls can be authenticated by hooking
+providers/hyperv: set the hostname
+synced_folders/smb: higher priority than things like nfs and rsync
+providrs/hyperv: ask for the vswitch to use
+providers/hyperv: disable parallelism
+core: expand isstate to support inversions
+providers/hyperv: suspend/resume
+providers/hyperv: that synced folder stuff can go
+synced_folders/smb: basically working
+providers/hyperv: clone the disk
+providers/hyperv: enable provisioning
+providers/hyperv: wait for communicator on boot
+providers/hyperv: wait for ip on boot
+providers/hyperv: use handlebox middleware
+providers/hyperv: destroy
+providers/hyperv: more checks on machine import
+providers/hyperv: shuffle things around
+synced_folders/nfs: unavailable on windows
+communicators/ssh: call ready? when waiting
+
+this lets things like the ssh key go in
+hosts/bsd: make directories unique when exporting
+core: re-ask if confirmation bad input [gh-3027]
+core: default url will be https
+ansible: generate inventory in .vagrant/...
+hosts/linux: escape regular expression for prune nfs exports [gh-2934]
+core: if can't communicate, force halt right away
+avoid locking in trap context
+core: disable parallelization if only one action
+core: copy all sub-directories in a box properly
+
+this avoids an errno::eacces on windows, although i'm really unsure why.
+more robust coreos checking
+providers/virtualbox: only clear forwarded ports if there are any
+communicators/ssh: more verbose output about waiting for ssh
+core: keep process group for ssh childprocess
+providers/virtualbox: cap to read forwarded ports
+up childprocess dep to 0.4.1
+guests/linux: public key insertion is more robust
+
+contents can have newlines (or not)
+core: make sure any subprocess exits no matter what
+core: poll for process exit on ssh#exec with subprocess
+core: handlebox keeps the same machine instance
+core: machine can set box
+core: machine#with_ui
+core: handlebox reloads machine from proper vagrantfile
+core: when loading box metadata, specify json header
+core: request json type when getting the metadata url
+core: download metadata with json accept header
+core: machine has reference to vagrantfile
+core: vagrantfile#machine_config returns more info now
+core: vagrantfile class now adheres to box_version
+core: environment uses the new vagrantflie class
+ensure options[:mount_options] is defined before checking if it includes key
+core: handle native windows paths like 'c:\foo.box'
+
+[gh-2081]
+core: set url to opaque if there is no path
+core: output a newline after ask with no echo
+core: output what we're updating and what we're not
+providers/virtualbox: check for outdated on any start
+core: get rid of unnecessary lines
+core: boxcheckoutdated only runs if told to
+core: boxcheckoutdated checks locally
+core: boxcheckoutdated can check if a box is outdated
+commands/box: outdated command to find outdated boxes
+core: box can store a metadata url
+providers/virtualbox: use new handlebox middleware
+core: catch enoent as not a metadata url
+core: boxadd expands url paths
+core: boxadd supports multiple urls properly
+core: handlebox reloads the box
+core: use symbol names for providers everywhere
+core: handlebox works with metadata boxes
+core: output the expanded url
+core: don't prefix ask statements
+core: ask what provider to use if multiple providers
+core: boxadd uses the proper path on unix
+core: boxadd now works with http urls
+core: boxadd checks if box already exists for metadata
+
+unless force
+core: boxmetadata can read the json description
+guests/linux: don't chown vb shared folders if readonly [gh-2442]
+guests/openbsd: ensure that `pkg_path` is set when installing rsync
+
+depending on the shell, `pkg_path` is not necessarily set when vagrant
+runs `pkg_add`.
+
+ref: gh-2917
+kernel/v2: support merging properly
+guests/openbsd: openbsd is not a linux derivative
+kernel/v2: allow ips to end in ".1" [gh-2914]
+ansible generated inventory: skip group variables
+
+except ':children' for groups of groups, it is safer to avoid generating
+':suffix' blocks. at the moment ansible only supports (but doesn't
+recommend) group variables (:vars), and the vagrant ansible provisioner
+won't support this way to define variables.
+core: force bundler usage if in installer
+core: execute the specified vagrant executable in pre-rubygems.rb
+provisioners/file: expand destination path if capable
+core: only load default and plugin bundler groups to avoid dev deps
+core: provider capabilities
+core: clear line with \033[k
+core: if synced folder type is blank, use default
+core: get rid of more references to scope, old terminology
+hosts/redhat: recognize korora [gh-2869]
+core: only bold when output is part of a machine
+hosts/gentoo: more robust check for systemctl path on gentoo
+core: make output white for now
+core: convert more output to `output` method
+providers/virtualbox: more detailed output
+providers/virtualbox: many `detail` level output
+core: align text and make sure its all lined up with prefixes
+core: within a bundler env, don't manage bundler
+core: seperate out io util helper
+core: default a value to avoid potential exception in sshrun
+guests/tinycore: tinycore linux support
+synced_folders/rsync: output directory under watch for rsync-auto
+synced_folders/rsync: make sure host path ends in "/"
+core: dont' load rc or profile when getting a cygpath with bash
+synced_folders/rsync: convert path to cygpath on windows
+synced_folders/nfs: don't nfs_prune on hosts that don't support it
+providers/virtualbox: retry list hostonlyifs [gh-2831]
+synced_folders/nfs: register `nfs_client_install` caps to correct distros
+core: respect vagrant_home everywhere
+
+use `vagrant_home`env var also for `plugin::manager` etc., not only in
+the `environment` class.
+more specific solaris 11 detection
+synced_folders/rsync: rsync-auto command
+core: interrupt in cli exits with 1
+synced_folders/rsync: expand host paths relative to root path
+synced_folders/rsync: `vagrant rsync` syncs the folders
+hosts/bsd: use util::which instead of system("which")
+hosts/bsd: don't execute shell for sudo commands [gh-2808]
+commands/list-commands: lists all commands primary and non-primary
+core: default commands to primary
+core: non-primary commands aren't shown in basic `vagrant -h`
+core: allow command plugins to have options
+provisioners/chef: don't follow symlink when chown
+synced_folders/rsync: warn if password auth
+synced_folders/rsync: output what is being excluded
+synced_folders/rsync: can exclude files
+synced_folders/rsync: allow guests to execute things before
+synced_folders/nfs: always prune [gh-2738]
+extend virtualbox convenince methods
+
+in the vein of #2426, i too can never remember syntax, and end up
+hunting for either an exisiting vagrantfile or starting to dig up
+details.
+core: only check for box existence if not force [gh-2757]
+core: batchaction should handle forks [gh-2756]
+guests/linux: properly quote and insert public key
+core: has_plugin? uses the new plugin manager class to check for gems
+hosts/null: needs to accept env as param
+hosts/windows: convert
+many more hosts converted
+hosts/freebsd: convert
+convert more hosts: arch and linux
+core: pass environment into all host caps
+core: whitespace
+core: pass extra args to detect? when detecting capability host
+commands/plugin: vagrant plugin install can accept multiple
+allow `vagrant (un)install plugin1 plugin2 plugin3`
+core: installing a plugin from a gem doesn't constrain it
+allow forcing plugins with vagrant_force_plugins
+core: when installig local plugins, don't fetch remote
+core: generate bogus gemfile so that a random lockfile isn't loaded
+commands/plugin: support installing from file
+core: reset the specification lookup when isolating gems
+allow defining of <install-type> and <install-type-args>
+core: whoops, don't print gemfile
+core: statefile can track sources, not sure if we'll use it though
+commands/plugin: convert all actions to use the new classes
+core: plugin::manager.installed_specs doesn't use bundler
+don't load plugins again on `vagrant plugin` commands
+commands/plugin: uninstall works again
+put plugins in their own gemfile group so we can load on their own
+load with bundler context
+installing gems works
+commands/plugin: list uses pluginmanager
+commands/plugin: list plugins uses bundler
+core: vagrant.require_plugin is gone
+commands/plugin: allow within bundler env (cause we always are)
+warn if running in a bundler env, don't load plugins
+use bundler to load plugins
+communicators/ssh: if insert_key is false, don't insert a key
+insert_public_key cap, and use that if it exists
+core: raise exceptions if they happen in waitforcommunicator threads
+core: warn if password only on `vagrant ssh`
+communicators/ssh: support passwords
+core: accept passwords in ssh_info
+provisioners/chef: synced_folder_type
+provisioners/puppet: synced_folder_type [gh-2709]
+v1.4.3
+detect fedora 19 and 20
+:fireworks: new year! :fireworks:
+v1.4.2
+core: undo last for now
+core: warn if no provider is specified that we can't check for it
+core: re-arrange some code to make things easier to read later
+synced_folders/nfs: lock around sudo input [gh-2680]
+core: ctrl-c no longer raises trap-context exception
+hosts/bsd: check exports only if exports file exists [gh-2714]
+core: handle eoferror when checking checksum [gh-2716]
+set default value to avoid a prompt
+guests/linux: emit upstart event on virtualbox using the expanded path
+core: vagrant.has_plugin? tries to match gem name first
+
+search primary from the list of gem names which have been loaded by
+`vagrant.require_plugin`. fall back to matching registered plugin names.
+v1.4.1
+guests/linux: up the amount of retries for nfs mounts
+commands/ssh: use proper variable
+providers/virtualbox: don't clear /etc/exports on bsds for nfs [gh-2645]
+core: sshrun uses new shellquote util
+core: put shell quoting into its own util class, it is useful
+core: -t/-t work for vagrant ssh -c [gh-2618]
+core: box removal of a v1 box works
+scripts: calculate shasum
+v1.4.0
+scripts: bintray upload
+providers/virtualbox: resume should wait for boot
+provisioners/puppet: use unique directory for each definition
+provisioners/chef: support proper counter for multiple chefs
+provisioners/shell: array args properly work
+providers/virtualbox: only clear shared folders if we have a vm
+commands/plugin: ignore default gems when pruning
+
+for modern rubygems compatibility
+guests/linux: --no-wait on emit [gh-2564]
+core: do proper type conversions for box checksum types
+core: check for ruby 2.0
+salt-bootstrap.sh: options are only allowed before install arguments
+provisioners/shell: s/unless/if !/
+core: validate box_download_ca_cert_file, expand
+core: output available commands in machine-readable
+provisioners/chef: validate environments path [gh-2381]
+guests/redhat: dhcp_hostname set to hostname [gh-2441]
+provisioners/ansible: use the first private key
+
+/cc @gildegoma - does ansible support multiple private keys? vagrant
+now does, so this isn't exactly safe.
+sometimes, ifdown is not enough.
+provisioners/puppet: manifests path can be in the vm [gh-1805]
+core: allow multiple private keys [gh-907]
+provisioners/puppet: make the output a bit clearer
+provisioners/shell: allow array args [gh-1949]
+core: only look for global flags before "--" [gh-2491]
+guests/linux: emit upstart event for vagrant mounted if avail [gh-2502]
+providers/virtualbox: some validation around internal networks
+providers/virtualbox: internal networks [gh-2020]
+core: allow hooking around provisioner runs
+
+/cc @fgrehm - :) i think you'll understand.
+core: allow custom callables in hooks
+core: expose the hook method from the env
+communicators/ssh: pty can be enabled
+commands/box: list has machine-readable output
+core: use openssh for ssh exec
+core: enable ssh compression for `vagrant ssh`
+core: allow env access in plugin loaded middleware
+providers/virtualbox: get rid of some 4.3 global state
+core: output when resuming box download
+core: don't make all downloads continuable
+core: output synopsis with command [gh-2249]
+synced_folders/nfs: specify nfs_udp false to disable udp [gh-2304]
+core: don't load vagrantfile on plugin command
+providers/virtualbox: retry suspended check [gh-2479]
+core: verify explicit sf types are usable
+kernel: handle new nfs types
+providers/virtualbox: make sure sf host paths are strings
+providers/virtualbox: don't use nfs middleware anymore
+core: syncedfolders middleware passes inoptions
+providers/virtualbox: use new syncedfolders middleware
+make salt bootstrap work on systems without python
+typo!
+commands/box: read box url and downloaded date from json
+core: persist box url and download date into a json file under boxes directory
+core: get rid of code that deals with box info on a separate statefile
+commands/box: list base box downloaded url and datetime when `-i` gets provided to `box list`
+commands/box: extract a base class for dealing with statefile instantiation
+core: write box information after download
+commands/box: introduce a statefile for keeping track of downloaded boxes
+core: scaffold an action for persisting box information
+core: allow hooking before and after provisioners
+store the final `provision_enabled` value to env
+
+let other middleware actions to know if we are really going to run the
+provisioners.
+compatibility with rubygems 2.x
+automatically enable symlinks on vboxsf for virtualbox 4.1 (see #713 and 387692f9c8fa4031050646e2773b3d2d9b2c994e).
+allow owner & group to be supplied as an integer and skip lookup
+hosts/gentoo: use subprocess machinery
+
+/cc @timgus
+v1.3.5
+providers/virtualbox: support virtualbox 4.3 [gh-2374]
+use old name instead of hard coded 'precise64'
+comma typo
+describing the usage of protocols for forwarded network ports.
+hostname and fqdn should be done in one line
+detect red hat enterprise linux 4 and oracle linux
+rename host plugin (fedora to redhat)
+v1.3.4
+core: defined action hook names can be strings, convert to symbols
+resolving #2194 (ansible buffering output if run as subprocess)
+provisioners/ansible: convert extra vars to strings [gh-2244]
+providers/virtualbox: don't touch dyld_* anymore.
+
+subprocess handles this
+guests/linux: fail after a number of attempts
+guests/linux: only successful mount if exit status 0
+core: unset dyld_library_path if setuid/setgid [gh-2243]
+core: don't output \e[0k on windows [gh-2246]
+dont replace windows newlines to unix if shell is set as binary
+v1.3.3
+core: set the dyld_library_path before other env vars
+v1.3.2
+core: vagrantfile must be file [gh-2216]
+provisioners/ansible: default output level is verbose [gh-2194]
+core: sleep between state checks for communicator [gh-2163]
+core: convert fp ports to ints [gh-2173]
+core: report the proper invalid state when waiting for the guest machine to be ready
+clarification: don't -> shouldn't
+core: allow strings to be used when checking for guest capabilities
+hosts/arch: correct variable for nfs exports [gh-2161]
+ansible: support three available verbosity levels
+v1.3.1
+guests/coreos: proper guest ip detection [gh-2146]
+core: vagrant_vagrantfile affects only project vagrantfile [gh-2130]
+core: dup option hashes everywhere
+core: dup the synced folder options [gh-2134]
+core: exec with the proxy command if specified
+provisioners/all: report proper invalid keys [gh-2117]
+ignore only root vagrantfile
+clarify statement on role files with chef-solo
+only ignore the root gemfile.lock
+guests/fedora: use peerdns=no in static [gh-2111]
+provisioners/shell: prefer "." over "::"
+
+/cc @fgrehm
+core: vagrant -v no longer loads vagrantfile
+core: vagrant.has_plugin? to check if plugin installed [gh-1736]
+commands/up: validate provision-with args [gh-1957]
+commands/reload: dont' provision by default
+core: don't provision after first `up` by default [gh-1776]
+guests/ubuntu: enable the new mount_nfs stuff
+core: arbitrary nfs options with nfs_options [gh-1029]
+core: note backwards incompat in code
+core: support "mount_options" for arbitrary mount options [gh-1029]
+hosts/bsd: proper nfs prune sed syntax
+providers/virtualbox: only set default name on first up [gh-1817]
+provisioners/puppet: run from correct working directory [gh-1967]
+provisioners/salt: default bootstrap script gets latest
+providers/virtualbox: 4.2 max network adapters to 36 [gh-1886]
+providers/virtualbox: run post-boot after boot but before wait for ssh
+[gh-2048]
+core: set `disabled: true` for disabling forwarded port [gh-1922]
+provisioners/ansible: execute ansible with cwd of root_path [gh-2051]
+provisioners/chef: use subprocess to execute knife
+core: inherit commandunavailablewindows from commandunavailable
+communicators/ssh: handle closed connection without exception
+plugins/provisioners: put generated inventory file in vagrantfile dir
+provisioners/ansible: allow verbose :extra to be string
+core: nitpick the protocol forwarded port checking
+more capabilities for openbsd guest
+support slackware linux
+
+signed-off-by: hiroshi miura <miurahr@linux.com>
+allow port-forwarding of the same port number but with different protocols [gh-1108]
+support verify_vmware_hgfs in darwin guest.
+provisioners/ansible: properly quote vars with spaces [gh-1984]
+plugins/provisioners/ansible: rename inventory_file to inventory_path
+
+/cc @ches
+plugins/provisioners/ansible: use exist? check
+
+/cc @ches
+tabs must die.
+forcing eth0 to come up
+make slaves connecting to first node
+lvp for coreos guest support
+start padding with 25 characters to keep original behavior
+use longest machine name to pad in status cmd
+v1.2.7
+show the correct installed plugin [gh-1834]
+provide a custom user agent header to curl request so that url shorteners are able to track the amount of downloads
+unnecessary '!'
+convert hostpath to string on windows so gsub works
+v1.2.6
+v1.2.5
+display post install messages if a plugin has any
+replace '\' with '/' on synced folders on windows
+mount nfs with udp protocol by default [gh-1706]
+discover and set ssh_auth_sock on sudo with forward agent [gh-1307]
+vboxmanage customizations can run at different events [gh-1247]
+validation so private network ip doesn't end in .1 [gh-1750]
+nfs request is silently ignored on windows [gh-1748]
+retry ssh on enetunreach [gh-1732]
+box_download_insecure to not validate https of box_url [gh-1712]
+forwarded ports don't auto-correct by default [gh-1701]
+shared folder target path can be a windows path [gh-1688]
+properly determine shared folder path even if .profile echos [gh-1677]
+don't forcibly output newlines for provisioners
+implemetn array arguments from #1569
+comment
+vagrant help <foo> works [gh-1578]
+vagrant_dotfile_path [gh-1524]
+register fedora host as centos too [gh-1394]
+ignore ruby managers
+default vm name for virtualbox contains vagrantfile vm name [gh-1281]
+nfs allows access from all networks on vm [gh-1204]
+remote commands show output when fails [gh-1203]
+use 32-bit integer for nfs fsuid for older kernels [gh-1127]
+shared folder inheritence doesn't overwrite multi-vm [gh-1935]
+nfs exports with wrong casing on case-insensitive work [gh-1202]
+method for getting the case-correct path of a path [gh-1202]
+v1.2.4
+nfs exports with single quotes now work properly [gh-1166]
+close ssh channel after exit status received [gh-603]
+support for chef solo environments, upcoming in chef 11.6
+forward ports can specify host/guest ip to bind to [gh-1121]
+expand symlinks for nfs host path [gh-1101]
+vagrant destroy exits with 1 if any confirmation are declined [gh-923]
+exported sub-directories of exported nfs dirs works on bsd [gh-785]
+v1.2.3
+correct 'exits' to 'exists'
+generate ansible_hosts file if one is not provided
+updating provisioner to use latest bootstrap script
+bind default ssh to 127.0.0.1 [gh-1785]
+validate an ip is given for a private network [gh-1788]
+read_ip_address linux cap only reads ip of first device [gh-1799]
+set arpcheck=no as an environment variable with doing ifup #921
+import the templaterenderer (like the other guests do).
+protected not private
+emit 'vagrant-mounted' on ubuntu in mount_virtualbox_shared_folder capability
+
+also includes the same, but commented out, for mount_nfs capability
+support different verbosity levels with 'ansible.verbose'
+properly convert provider name to symbol when searching for boxes
+
+[gh-1691]
+smartos should be omnios
+puppet provisioner supports hiera by specifying hiera_config_path
+use the proper path on puppet apply to the manifest
+support working_directory option for puppet [gh-1670]
+smartos support for setting hostnames [gh-1672]
+v1.2.2
+convert dos line endings to unix in shell provisioner [gh-1495]
+in a multi-machine environment, don't download box multiple [gh-1467]
+pushing salt provisioner
+v1.2.1
+use mozilla ca cert bundle for ssl validation
+mount vbox shared folders with proper owner/group [gh-1611]
+`--[no-]parallel` for vagrant up
+ability to specify no parallelism on the environment
+get rid of arbitrary 4 second sleep for ssh
+follow redirects when downloading boxes [gh-1607]
+properly set the chef-solo run list [gh-1608]
+v1.2.0
+default node name
+freebsd and openbsd guest detection
+linux guest detection
+output shell script that is running [gh-1568]
+shared folders with the same guest path overwrite each other
+more robust hostname checking for redhat [gh-1566]
+don't duplicate names when defining new machines in vfile
+don't allow the forward_* ssh option sto be default, no sense
+files_path setting for cfengine
+run_file path validation for cfengine
+running provisioner output shows provisioner shortcut, not class
+specify extra args for the cf-agent call
+run_file and single_run mode in cfengine
+basic cfengine boostrapping
+start working on cfengine bootstrap
+support installing cfengine on redhat
+starting work on cfengine, installs on debian
+networks come back up properly after reboot on redhat [gh-921]
+extend should be include for templaterenderer in caps
+convert capability name to symbol for lookup
+convert network type to symbol so that strings can be used
+message on `up` that vm is already running [gh-1558]
+get rid of ruby warning from shadowing in ssh command
+send ssh keep-alive packets [gh-516]
+rtcuseutc as sane default for vbox [gh-912]
+use vagrant tmp directory for boxes [gh-1442]
+vagrant ssh on cygwin won't output dos path file warnings
+proper clear line text for cygwin
+expand cygwin path to windows for virtualbox shared folders
+properly expand cygwin paths to windows path for vboxmanage
+assume cygwin has a tty for input [gh-1430]
+on windows, prefer userprofile for home directory path
+validate that extra_vars is a hash
+make ansible extra_vars a hash instead of a string
+include should be extend for class methods
+solaris capabilities
+lots more guest capabilities converted
+freebsd capabilities
+fedora capabilities
+convert arch to capabilities
+use vagrant::util::subprocess.execute instead of safeexec
+halt and mount nfs are caps
+sethostname uses new cap system
+first capability for linux
+machine#guest returns the proper guest detected
+forward arguments down to capability
+guest#capability to execute capabilities
+laying the foundation for the new guest plugin
+respect :mac option for networks [gh-1536]
+get rid of debug exception
+get rid of unnecessary variable
+safechdir all the things for thread safety
+re-disable parallel on virtualbox
+lock around chdir in subprocess for thread safety
+up command now uses environment#batch
+environment#batch and forcing disable through env var
+run "up" in a batch action so it parallelizes
+batchaction for running actions in parallel
+provider plugins can provide arbitrary options
+respect the "disabled" flag for shared folders for virtualbox [gh-1004]
+properly accumulate and parse curl output for progress
+download boxes using curl!
+return the value of the yielded block in busy
+v1.1.6
+v1.1.5
+don't share default chef folder if doesn't exist on host
+retry ssh on errno::eacces
+only prepend/append once for hooks
+allow disabling prepend/append hooks
+properly detect in valid provisioners
+more comprehensive synced folder validation [gh-1499]
+don't load plugins.json plugins in bundler env
+v1.1.4
+default forward port adapter for virtualbox should be 1
+v1.1.3
+force to_i on adapters for forwarded ports in virtualbox
+properly handle forward port collision detection with auto-correct
+[gh-1472]
+chef-solo recipe_url works properly again [gh-1467]
+support a few more gem parameters - take 2
+allow anything that can #to-s for vagrant.plugin
+attempt to re-establish ssh connection on net::ssh::disconnect
+v1.1.2
+v1.1.1
+turn network, provider, and provisioner names into symbols if not
+don't "return" if fp less than port 1024 [gh-1421]
+don't load any plugins for `vagrant plugin` [gh-1418]
+when there is no route to host for ssh, re-establish a new connection
+properly quote regular expression inputs to stringblockeditor
+v1.1.0
+raise childprocess::launcherror with the original message to ease debugging when running subprocesses
+validate the hostname setting
+whitespace
+raise an exception if the provider is reporting ssh is not ready
+always unload the environment
+validate forwarded ports
+v1 upgrading works with the new network syntax
+hashes for all the networks
+new vagrant private key mode [gh-580]
+vagrant plugin list works properly with isolated gem env
+capture stdout/stderr when loading plugins so that it doesn't just
+happen
+unknown keys return a dummyconfig rather than openstruct
+sethostname middleware uses hostname
+line up equal signs because i'm anal about it
+autoload he port collision middleware
+virtualbox should use the new port forwarding collision detection stuff
+first pass at a forwarded port collision middleware
+vagrant_vagrantfile env var to specify alternate filename for vfile
+only look for `vagrantfile` if no more specific was given
+retry setting default name for virtualbox vm [gh-1368]
+for hooks, put the environment in the action env
+be smarter about determining if plugin load failed
+environment_unload hook
+environment#hook allows hooks to be run at arbitrary points
+specify action_name for all machine actions for action hooks
+action_hooks can hook into specific actions
+hooks allow parameters and blocks to middlewares
+merging networks works again
+retry ssh on eaddrinuse
+be more helpful with vboxmanage_error
+allow non privileged user vagrant to run a shell provision
+removing extra file
+no longer need vboxmanage.exe to be in path in cygwin.
+which_test
+rename fileutil to which since its too close to fileutils
+enable windows users with ssh installed to use 'vagrant ssh'
+warning and automatically handle "v-root"
+relax retry constrains on mounting nfs
+close the tempfile for shell provisioner [gh-1040]
+more gracefully handled plugins which cannot be found
+put the machine action in the middleware env
+plugins can define action hooks via action_hook
+hook#apply
+hook class
+enable symlinks on vboxsf for virtualbox 4.2 [gh-713]
+allow ssh upload to upload directories
+be more sane about cookbook_paths default in chef
+pass a proper pathname for sshexec to check key perms
+ssh communicator: check_key_perms should be a pathname
+specify specific auth methods to use for ssh.
+
+specifically no "keyboard-interactive" ever
+use the hashicorp gem source for plugin installs
+expose the home_path to the action runner
+forgot an autoload for plugins
+`vagrant plugin license` command.
+handle the case a plugin install is a plugin not found
+list plugins should have output when no plugins
+vagrant_no_plugins can be used to skip plugin loading
+don't use the rc file, use the json state file
+`vagrant plugin uninstall`
+sort the state file as well for sanity
+make sure the state file only contains unique fields
+be silent when uninstalling gems
+perform gem uninstallation for prune
+list actually compares state with gems
+a really basic "list" command
+have a base class to invoke actions on the plugins
+start creating the plugin middleware sequences
+`vagrant up` says what provider it will use
+put the provider name in the status output
+retry ssh on connection reset
+extra protection in the rgloader file
+detect if a vm name is already taken for virtualbox
+`vagrant provision` accepts `--provision-with` [gh-1167]
+properly handle paused virtualbox vms [gh-1184]
+support mounting nfs folders with spaces in freebsd [gh-1229]
+sanitize folder names for default virtualbox name [gh-1223]
+use box directory as temporary directory to avoid cross-device [gh-1199]
+show proper message when viewing status for multi-machine
+don't fail too early with bad vagrantfiles [gh-1345]
+convert provision types to symbols so they work
+pass the start options into the actions so that they have effect
+--provision-with works properly again
+--no-provision works properly again
+nfs properly detects hostonly network for virtualbox
+downloading the box_url component works again
+install bsdtar in travis environment
+forced halts work
+vagrant destroy --force works [gh-1340]
+unlock the file explicitly due to some weirdness on bsd kernels
+allow path and exception for lock middleware to be procs
+typo in setting up synced folders
+warn if vagrant is run outside of installers
+use bsdtar to repackage boxes
+switch to bsdtar for unpackaging a box
+return exit status of 1 on invalid command
+
+makes "vagrant destroyjj" and similar return an exit code of 1, so that
+"vagrant destroyjj && vagrant up" works as expected.
+provisioners now sync folders
+make all the virtualbox middleware aware of synced folders
+set the proper force halt environment
+vagrant status uses new machinestate results
+virtualbox provider returns new machinestate object
+raise an exception if a non-machinestate is returned
+whitespace weirdness in the `status` command file
+private key path is put into quotes in case of space-including username.
+virtualbox uses the new validation middleware
+validate providers and provisioners!
+machine objects are passed into validate instead of env
+catch errno::etimedout for ssh
+strip the value, actually, to trim the front newline
+chomp values inserted into a stringblockeditor
+stringblockeditor to help plugins with owning parts of files
+use registries for the v2 plugin manager
+registries support merging
+don't explicitly set the host to 127.0.0.1
+
+other providers may not have this requirement
+util::scopedhashoverride
+check port collisions now uses the new high-level networking
+rework v1 forward_port call to append forward port networks
+fedora 17 & 18 support
+temporarily disable network action while it is broken
+virtualbox forwarding port uses new `network` calls
+booting new virtualbox vm should check for port collisions
+convert provider to symbol only if non-nil
+convert provider to symbol
+active_machines should return name as a symbol
+environment#primary_machine_name and use it for with_target_vms
+
+this makes the single-provider and default provider semantics work with
+primary vms.
+the --provider flag for `up` now actually does something.
+comment clarification
+when recovering on import and destroying, force it
+allow confirm calls to be forced by specifying a force_key
+environment#primary_machine takes a provider argument. use it.
+environment#default_provider
+no need to call `load!` anymore, since it doesn't exist
+boxcollection#find should only find v1 box when searching for vbox
+get rid of the old environment#vms calls. use #machine everywhere.
+suppress knife output
+scrub ld_library_path prior to executing vboxmanage
+more readable gemspec according to @jordansissel
+require set in the v1 plugin file since it uses it.
+whitespace in gemspec
+turn provisioners to v2
+providers to v2
+hosts to v2
+guests to v2
+communicators to v2 plugins.
+get rid of some ruby warnings due to shadowed variables
+convert comands to v2 plugins.
+don't allow registry to be given value in non-block form
+omit empty lines in puppet provisioner output
+
+the sudo() block and/or the puppet provisioner often returns newline
+characters as separate strings. this makes the chomp() ineffective and
+results in extraneous spacing between the output lines.
+
+separate out the call to chomp() so that we only do it once. then only
+output info if that line is not an empty string.
+allow hostnames to be subset of box name for ubuntu
+disable dns proxy for 12.10 too
+whitespace and such
+use `next` over select with symbol to proc
+forward port gh-1142
+forward port gh-1140
+virtualbox 4.2 support
+`box.url` can use `file://` uri
+comment the action_box_add method
+convey default destroy confirmation choice as 'n'
+
+the convention is to capitalize the default choice when presenting
+the user with a confirmation dialog. this alters the choices for
+'vagrant destroy' confirmation from [y/n] to [y/n].
+`vagrant up`!
+`vagrant provision`
+`vagrant reload` now works with the new machine abstraction
+properly handle the case that  vm doesn't exist for the vb driver.
+`vagrant destroy` fully works
+`destroy` gets a little farther, and properly halts the vm
+`vagrant resume` works with the new machine abstraction
+ssh_config works with new machine abstraction
+`vagrant suspend` works with new machine abstraction
+switch all `channel` to `communicate` in the linux guest
+begin working on the #guest method for machine instances
+`vagrant ssh -c` now exits with the proper exit code
+`vagrant ssh -c` now uses a middleware sequence
+just always return the ssh communicator for machines for now.
+
+in the future we'll actually find a matching communicator but for now
+since we're just focusing on machine abstraction, we just return ssh.
+allow the definition of communicators in plugins
+sshexec raises proper exception if ssh is not yet ready
+machine#action supports passing in extra env vars for action runner
+expose the provider via the machine object.
+call now only yields the environment
+destroy sequence asks the user for confirmation.
+folder is ~/.vagrant.d not ~/vagrant.d
+machines can call actions on their providers.
+handle interrupts more gracefully on the warning message
+box#repackage to repackage a box.
+`vagrant box list` uses the new collection stuff
+box2 reads the metadata.json file.
+boxcollection#all returns all boxes, including v1 boxes
+interrupt when asking to destroy a vm should exit. [gh-1017]
+handle the case where ctrl-d is pressed on input.
+don't set the gateway for host only, this sometimes causes internet
+breakge
+point to templaterenderer properly in chef provisioner base
+reference proper constant all_actions
+convert the path to a string because it may be a pathname
+check for permission denied when using scp to upload [gh-924]
+renamespace kernel to kernel_v1
+subprocess now only yields stdout/stderr if you're listening
+easy operations `run` and `sudo` now echo stdout/stderr
+easy commands now take a target vm name
+
+it is assumed to be the first arg, as long as the first arg doesn't
+begin as a flag "-foo"
+reword plugin autoloading message slightly.
+defer loading for commands to last possible moment
+get rid of autoload in hosts plugins
+convert all command plugins to use the new `activated` block
+avoid `unless`
+single-vm mode still allows target name in vagrant commands
+vagrant.require_plugin [gh-916]
+environment.rb doesn't need to load in "rubygems" anymore
+use `load` for the vagrantrc, make sure it is only loaded once
+allow creating multiple easy commands
+easy hooks
+rename easycommand namespace to easy
+raise exception if the insert_before middleware is not found
+validate that commands only contain proper characters
+`download` operation
+`upload` operation for easy commands
+plugin easy commands.
+
+easy commands are well... easy! they don't offer the full power of
+creating a completely custom command class, but they let you do the
+basics (what almost everyone needs) with minimal fuss. example:
+
+class myplugin < vagrant.plugin("1")
+  name "my-plugin"
+
+  easy_command "foo" do |action|
+    puts "hello!"
+  end
+end
+
+note: the "action" stuff isn't done yet, but will be soon!
+plugins can now have action_hooks
+use the .vagrantrc for plugins!
+support multiple paths in vbox_install_path [gh-885]
+after changing the file permissions, we need to reload the stat before comparing again. otherwise we will always throw an exception even if we set the permissions successfully.
+get rid of provisioners directory
+get rid of the unset_value stuff, save it for v2
+basic plugin class
+`vagrant destroy` works in "guru meditation" state
+don't use unless
+bump the json dep [gh-838]
+catch errno::etimedout for downloading boxes [gh-849]
+v1.0.2
+fail fast if the vm fails to boot properly. [gh-825]
+allow multiple vms to be specified for relevant commands
+support arbitrary exit statuses for cli commands that aren't exploding
+check if a port is open prior to forwarding [gh-821]
+isportopen utility
+enable dns proxy (in nat mode) by default
+safe_puts to avoid epipe [gh-819]
+make sure that the private_key_path is expanded before checking existence.
+this allows for paths like ~/.ssh/some_key to be defined in the vagrantfile.
+v1.0.1
+openbsd guest [gh-773]
+`vagrant reload` accepts `--no-provision` and `--provision-with`
+vagrant_cwd can be set to set the cwd of `vagrant`.
+even with a custom vagrantfile name, use defaults [gh-778]
+load rubygems in environment.rb [gh-781]
+mar 6 actually
+ignore me.
+make sure a driver is always set on a vm object
+avoid deadlock behavior on windows subprocess io [gh-765]
+automatically convert all customize arguments to strings.
+don't run travis yet :( not ready
+make vm#run_action public for plugin devs
+support for bridged networks in freebsd
+nic type can also be defined for host-only adapters
+check that virtualbox exists early. [gh-746]
+gracefully handle if the type of arg is not correct for bridged.
+[gh-743]
+destroy vms in reverse order. [gh-739]
+retry virtualbox commands. [gh-726]
+convert lineendings for the other guests as well
+get rid of tabs
+expose virtualbox base driver methods execute and raw
+v0.9.7
+windows subprocess io works again. [gh-721]
+convert example host only ips to rfc1918
+`destroy` takes a `--force` flag [gh-699]
+`destroy` asks for confirmation. [gh-699]
+v0.9.6
+don't forward ports if there aren't any to forward
+uncolorize puppet provisioner output
+custom help for `vagrant gem` on top of rubygems help
+`vagarnt gem` cannot be called within a bundler env
+starting on the `vagrant gem` command.
+v0.9.5
+ability to specify `:bridge` to networking [gh-655]
+do not allow bsd hosts to double-quote in exports
+
+this is not allowed on *bsd
+the type of nic can be set for bridged network.
+
+:nic_type can be specified in the network bridged type. its value can
+be am79c970a, am79c973, 82540em, 82543gc, 82545em, virtio.
+v0.9.4
+set the name as a separate step. [gh-669]
+properly detect arch, fedora, freebsd [gh-683]
+nfs shared folders can contain unexpanded guest paths
+regexp escape vm names when matching for them.
+v0.9.3
+v0.9.2
+unnecessary line of code
+allow shell expansions in shared folder guest paths again [gh-656]
+use ifdown instead of ifconfig down for ubuntu/debian
+use symbol as a hash key for subprocess. guarantees we always get a string back.
+filter clear screen character out of stderr as well
+filter the clear screen command over ssh connections
+v0.9.1
+switch to using ifconfig <device> down instead of ifdown. ifdown will return non-zero status if device failed to get ip during dhcp.
+nfs action no longer needs to recover from anything
+v0.9.0
+do expand_path in fileutils.cp, where it really matters.
+check for /etc/exports before pruning
+up childprocess to 0.3.0
+no more `nfshelpers`
+warn user we're pruning exports
+ubuntu will emit a `vagrant-mounted` event. [gh-576]
+
+there will be a mountpoint variable available with this event that
+will point to the shared folder that has been mounted.
+always clear nfs exports for the vm booting [gh-529]
+options after `--` to `vagrant ssh` are passed through to ssh [gh-554]
+arbitrary mount options can be passed to shared folders with `:extra` [gh-551]
+verify shared folders for puppet
+depend on childprocess 0.2.8
+make acceptance tasks easier to run
+windows host
+don't clear nfs exports on expected failure [gh-577]
+namespace provisioner templates
+support virtualbox 4.0
+driver forwarding to 4.1 works properly
+virtualbox base class for the driver.
+we should verify virtualbox is detected before looking for the old vm
+more robust vbox_install_path handling on windows
+default host class is the base class
+up childprocess dep to 0.2.6 for windows support
+show `attempting graceful shutdown` message from action, not guest
+re-use ssh connection
+uploaded files now use temporary files rather than stringio
+no longer require `forwarded_port_key` setting, its gone
+ssh connect is now ssh `exec`
+vagrant::ssh no longer handles actual communication with the vm
+syntaxerror
+ssh communication should inherit from base
+communication abstraction. started ssh.
+require tempfile in shell provisioner
+subprocess uses readpartial on io for windows [gh-610]
+
+windows doesn't support read_nonblock.
+use vbox_install_path on windows to find vboxmanage [gh-609]
+depend on childprocess 0.2.5
+`vagrant ssh -p` is now plain mode
+tweak a variable name & help string
+forwarded ports no longer require a name paramter
+make adapter 1-based for forwarded ports as well
+check for adapter collisions
+clear all network adapters during the boot process
+vagrant now asks what adapter to bridge to
+enabling bridged networks on debian
+bridged networking basics.
+rename network action to hostonlynetwork
+default host only adapters to #1 again
+proper number of arguments for puppet provisioner
+make export in general vboxmanage friendly
+require things as they're needed
+a regex string can be passed to commands in multi-vm
+make requiring a single vm target in a command more dry
+util::busy calls the callbacks in reverse order
+handle interrupts well with virtualbox.
+`vagrant ssh -c` stderr now goes to stderr on the host as well
+`vagrant ssh -c` will now exit with the same exit status of the command [gh-598]
+do port forwarding threshold check in the `call` method
+check currently forwarded ports when looking for collisions [gh-606]
+check for port collisions after clearing forwarded ports on `up`
+pull out port collision detection/correction into the checkportcollision middleware
+discarding state works with vboxmanage
+subprocess now works properly with ruby 1.8.7
+`vagrant ssh` works again
+handle the case properly where the vm in `.vagrant` doesn't exist anymore
+nat checking for forwarded ports
+do a block_given check on import so you can call it w/o a block
+import progress works again
+host only networks now work with vboxmanage
+subprocess: catch any stdout/stderr left over after process exits
+customizations are back in!
+box verification works with vboxmanage
+vm suspending works
+vm halt works.
+lots more vboxmanage
+forwarded ports
+drivers now take a uuid
+make more things vboxmanage compatible
+load virtualbox vm in the vm class
+attach a driver to each vm. use that to detect virtualbox.
+`vagrant --help` now works for ruby 1.8.7 [gh-599]
+enable provisioning by default [gh-601]
+require vagrant environments for some commands.
+"provision.enabled" is once again honored. [gh-591]
+ruby 1.8.7 compatibility
+styling
+box commands
+`vagrant status`
+`vagrant ssh`
+suspend command
+provision, reload, resume
+`vagrant halt`
+`vagrant destroy`
+`vagrant up`
+print help and exit on "-h"
+re-namespace messages for systems to the vagrant.guest
+another tweak to chef to get it to work with new system
+when import recovers, don't validate when calling destroy
+autoload provisioners.
+make host class available to all actions
+re-order things in vagrant.rb slightly
+registry is enumerable
+rename action registry to just vagrant::registry
+copy insecure private key to user owned directory [gh-580]
+v0.8.10
+return true on ssh up?
+v0.8.9
+sleeping with the fisshes?
+use shutdown instead of `halt` [gh-575]
+get regression working again
+environment reloading works
+get rid of more env.env calls
+return nil if no root path to determine dotfile
+do not buffer stdout/stderr
+return proper dotfile path
+tweak actions for new runner
+come a lot farther in getting `up` to work again
+lazy load attributes for runners. get box repackage working.
+box destroy works again
+action runner supports global parameters
+integrate new action runner/registry into vagrant::environment
+separate vagrant::action into runner and registry
+raise exception in edge case
+the proper enter/exit sequence is called for multisteps
+multistep does not allow composing steps that do not work together
+multistep should do input/output validation
+multistep can now take parameters from any arbitrary step prior.
+revamp step to be more like a python with-context
+starting to revamp boxcollection to not depend on env
+make vm names symbols again, since they're accessed often.
+rip out thor::shell
+v0.8.8
+append folder name to chef solo cookbooks [gh-511]
+proper support for nfs in freebsd
+kernel.exec still failing in os x leopard [closes gh-544]
+get rid of reference to the video
+make rake acceptance:boxes os-independent
+slight tweaks for gh-556
+tempfile no longer needed in isolated env
+rake task: use ``spawn`` instead of popen4 to avoid full pipes.
+stdout.sync = true for rake tasks.
+shared contexts for vagrant command similarities
+rakefile acceptance/{helpers ~> support}
+digest/sha1 not required here
+set isolated environment working dir to the proper directory
+use /etc/nodename for hostname; preferable for this situation
+support for http auth in box url. [closes gh-521]
+sort shared folders by length only if they have a guest path
+michellh/vagrant#524
+v0.8.7
+show warning if forwarding port less than 1024 [closes gh-487]
+don't do the port threshold check if running under root
+bump i18n to 0.6.0
+v0.8.6
+check for vm accessibility in ssh_config
+accessibility checks on vm for `ssh`
+`vagrant provision` checks for inaccessible vms
+handle inaccessible vms with "vagrant status"
+don't expand vm folders for chef
+args can now be specified to the shell provisioner [closes gh-475]
+use proper nfsd binary on fedora [closes gh-450]
+distro dispatch for host classes
+clear the line on box downloads [closes gh-476]
+v0.8.3
+vagrant ssh -c no longer emits prefix and newlines [closes gh-462]
+archlinux host only network support [closes gh-448]
+set hostname on archlinux [closes gh-439]
+
+signed-off-by: dave simons <dave@inuits.be>
+ssh: get proper $path for exec! [closes gh-426]
+v0.8.2
+reconnect ssh if the session closes
+v0.8.0
+v0.7.8
+require virtualbox 4.1.x
+network: use new 4.1.x attribute host_only_interface
+puppet requires a puppet group
+ruby 1.8 compatibility
+resourcelogger doesn't need to be thread-safe. vagrant is not multi-threaded.
+only get the home path on the root environment
+retry connection on net::ssh::disconnect [closes gh-313]
+standardize on util::platform
+woops, vagrantfile.erb template
+vagrantfile now is lowercase. backwards compatible, though. [closes gh-399]
+be smart about loading files in vagrant::ssh
+clear shared folders now in the context of a single write lock
+clear forwarded ports is now done in context of customize block
+reload vm after running customization blocks
+multiple chef provisioners no longer overwrite cookbook folders. [closes gh-407]
+chef solo no longer overwrites share folders when multiple provisioners exist
+provisioners now properly share folders again
+no longer need the provisioners attr_accessor on the provision action
+forward agent and forward x11 properly appear in `ssh_config` output. [closes gh-105]
+`vagrant ssh` -e flag is now -c [closes gh-323]
+`ssh_config` will use vm name if given for host name [closes gh-332]
+can now specify owner/group of shared folders. [closes gh-350]
+host only network works properly on multiple adapters [closes gh-365]
+ability to provide inline script for shell provisioner [closes gh-395]
+rename :chef_server to :chef_client. [gh-359]
+v0.8.0.dev
+v0.7.6
+lock virtualbox dep in gemfile to 0.8.x ref
+load prerelease plugins if available
+run chef commands in a single command [gh-390]
+allow nfs chef mounting [gh-378]
+v0.7.5
+no more rubygems deprecation messages!
+v0.7.4
+provide a method to specify a chef environment in a vagrantfile.
+v0.7.3
+retry all ssh commands on net::ssh::disconnect
+retryable can take multiple exceptions to retry on
+setting hostname on debian (not ubuntu) should now work [closes gh-307]
+v0.7.2
+make code a bit more readable
+nfs folders with spaces should now work [gh-293]
+it is mac_address not mac
+missed a >
+allow specification of mac in network command
+on sudo!, wait for channel/command to complete before returning
+"sudo -i sh" doesn't do the right thing on debian lenny (sudo v1.6.9).  let's try "sudo sh -l" instead.
+host only networking only doesn't work on 64-bit windows
+v0.7.1
+gentoo host only network no longer fails if already enabled. [closes gh-286]
+chmod and execute shell provisioning script in a single session
+shell provisioner stdout/stderr to console
+new `shell` provisioner which uploads and executes a script as root on vm
+ssh commands which use sudo compatible with sudo < 1.7.0
+freebsd system
+v0.7.0
+assign puppet command to a variable for later use
+we don't need net-ssh-shell after all
+all provisioners are now rvm-friendly
+puppet is now rvm friendly
+net-ssh-shell support for shell-based ssh interactions
+support hash based options for provisioners
+provision action works again
+provisioners now register themselves with their shortcut name
+debian system. linux distro dispatch to debian/gentoo
+gentoo needs its own prepare_host_only_network method
+register gentoo system.
+gentoo system, inherit from linux
+systems can now respond to `distro_dispatch` to return specific distro systems
+hash#select returns an array on 1.8.7 and a hash on 1.9.2. make sure it is always a hash.
+contrib: teach vim to treat vagrantfile as ruby
+
+install into $home/.vim/plugin/vagrantfile.vim
+
+signed-off-by: brandon philips <brandon@ifup.org>
+only automount nfs folders which have guest path specified
+shared folders with no guest path are not automounted [closes gh-184]
+downloaders have clearer output to note what they're doing
+don't disable networks on halt/destroy.
+depend on virtualbox ~> 0.8.0 for vb 4.0 support
+v0.6.9
+don't need to call ".new" on raising exceptions
+platform helpers to detect 64-bit and 32-bit cpu.
+use rbconfig to get host os
+enumerate vms according to definiton order.
+ignore ctags files
+puppet provisioner
+register solaris system.
+v0.6.8
+box collection reloads after downloading during checkbox. [closes gh-229]
+boxcollection no longer inherits from array
+translation for "stuck" state in vm [closes gh-218]
+v0.6.7
+up to v0.6.7.dev for development
+v0.6.6
+`vagrant status name` works again. [closes gh-191]
+validate only certain command sequences [closes gh-188]
+somewhat ghetto callback system in place to handle validations now. this will definitely get looked at again in the near future.
+general validation middleware
+check if file exists on root path traversal [closes gh-182]
+up to 0.6.6.dev for development
+default vm name is now properly env cwd folder name
+`up --no-provision` works again. this disables provisioning during the process.
+action warden doesn't do recovery process on `systemexit` exceptions, allowing double ctrl-c to work properly again.
+only check for box directory if it is set during unpackage recovery [related to gh-170]
+subcommand help shows proper full command in task listing. [closes gh-168]
+instead of using kernel#system, use custom piped solution
+check box action no longer needs to load_box!
+up to 0.6.4.dev for development
+more ruby 1.8.7 trickery
+v0.6.1
+don't use ruby 1.9-only code
+up to 0.6.1.dev for development
+v0.6.0
+vms are now named by their containing folder, by default
+don't require root path to load an environment. (makes `vagrant box` commands work again without a vagrantfile)
+"self.name" needn't be defined for target_vms helper to be used
+command helpers `target_vms` now takes an optional string for the vm name
+raise proper exception if ssh connection is refused with message to help people.
+"vagrant_main" is no longer the default run list for chef. it now starts empty.
+import uses the string path, rather than the pathname
+verify box with a string path, not pathname
+send string, not pathname, to minitar for decompression
+utilize pathname when available instead of doing just a file.join
+new boxcollection class to keep track of all boxes.
+environment#home_path is a pathname object for easier manipulation
+`vagrant status` shouldn't call "require_environment"
+get rid of redundant retries, switch to retryable
+retry on ssh#exec! as well
+get rid of "mock_action_data" use "action_env" instead
+allow downloading via a proxy if http_proxy environment variable is set. [closes gh-157]
+fork-and-wait on tiger as well as leopard. [related to gh-51]
+fork-and-wait on tiger as well as leopard. [related to gh-51]
+require root path on environment load
+environment#cwd and environment#root_path are now pathname objects for more robust usage
+only run environment#load! once
+run "environment_load" action on environment load
+no need to reload the vms hash if has a parent environment.
+spelling corrections on translations
+environment is lazy loaded for `vagrant` binary.
+load the root path on demand.
+default cwd to pwd for environment
+action environment uses new indifferent hash util
+load the host on demand in the environment
+persisting a vm uuid is now implicitly done by vagrant::vm
+get rid of exceptions/ folder.
+extremely basic radar integration
+replace the erb syntax with proper i18n interpolation
+warden properly handles interrupts
+get rid of util.rb. no longer used.
+ssh no longer raises actionexception. raises vagranterror
+provisioners raise exceptions
+about 1/3rd of the vm actions raise exceptions now
+rip out unison syncing. it never got to see the light of day. just didn't work out. (nfs replaced it)
+convert provisioners and systems to i18n
+hosts use i18n
+i18n for general actions
+box actions now use i18n
+i18nified all the vm actions
+no need to reference vagrant namespace directly here...
+`vagrant box list` warning uses en.yml
+`vagrant status` output now uses the new i18n locale
+get rid of all ruby warnings in vagrant
+`vagrant -v` works again [closes gh-147]
+support for aliasing commands
+the `target_vms` helper in multivm with no name specified will return all vms, not the hash [closes gh-148]
+`vagrant suspend`
+`vagrant ssh_config`
+`vagrant resume`
+`vagrant reload`
+`vagrant provision`
+`vagrant halt`
+`vagrant destroy`
+`vagrant up`
+only calculate the target vms once
+helpers to get target vms in commands from parameters
+`vagrant status`
+vagrant_debug env variable is required to be set for stacktraces to show up from binary
+`vagrant box list` is back in business
+box command to show example of a groupbase command
+command::groupbase for creating subcommands for thor.
+began work on new cli.
+only calculate the source root once
+get rid of the project_root constant.
+recover argument count wrong
+box download action switched to warden rescue
+use file.join instead of file.expand_path in chef solo provisioner for folder paths. allows it work on windows again.
+`vagrant up` can be used the same as `vagrant resume` [closes gh-134]
+run chef provisioners with "-e" flag on sudo so path is preserved on centos [closes gh-133]
+enable ability to supress newlines in erb for templates using -%>
+quiet output slightly on `destroy`, `halt`, and `reload`
+properly discard vm state if saved on various commands such as destroy [closes gh-123]
+`vagrant box repackage` can now take the typical `--output` and `--include` parameters
+separate vagrantfile creation in packaging and actual packaging
+raise a useful exception when an invalid callable is ran
+don't generate ri or rdoc on `rake install`
+v0.5.0
+get rid of some outdated todos
+download the box specified by the url if it doesn't yet exist [closes gh-113]
+
+thanks a lot to vitor pellegrino for much of the work on this.
+make box_url nil by default
+checking if a box already exists at the checking middleware
+goodbye jeweler. using gemspecs like they were meant to be used.
+sigint twice exists immediately [closes gh-118]
+can now ctrl-c during ssh attempts [closes gh-115]
+disable host only networks on halt [closes gh-116]
+don't return when finding disabled shared folder, continue to include others
+expand the nfs shared folder path relative to root path during the extraction.
+run the destroy sequence instead of the specific action for handling sigint in import
+if sigint is called during a sequence with an import, vm is properly destroyed
+boot verifies not erroneous environment before booting
+action environment injected with `interrupt` exception if sigint occurs during action chain.
+the new vagrant::util::busy.
+linux nfs support (host)
+bsd exports template properly takes into effect mapped gid as well
+mount nfs folders before provisioning
+shared folders marked with `:disabled` flag will be ignored.
+mount nfs folders on the linux system
+checking for nfs no longer outputs things
+action environment hash has indifferent access
+halt on destroy will not attempt graceful [closes gh-110]
+rescue typeerror when checking for nfs and return false [closes gh-109]
+host nfs export
+pass guest ip along to the host#nfs_export function
+get host ip on nfs middleware and call proper system methods
+futher work to the nfs middleware
+started on nfs middleware
+concepts of "hosts" introduced, preparing for host-specific behavior.
+clear forwarded ports middleware
+clearsharedfolders middleware
+catch remaining locations with action exceptions
+catch exceptions on download
+goodbye, actions
+actionexception on vagrant::action
+get rid of actionexception usage in provisioners
+provisioner now uses the action environment
+box destroying middleware
+box verification
+allow the node_name to be set for the chefsolo provisioner.
+vm is no longer an action runner
+box downloading uses box environment key
+box downloading middleware
+action.run can be called with a class
+export middleware
+customize uses the proper vm object
+resume uses the raw start action
+resume middleware
+suspend middleware
+provision registered actions
+start, reload, halt now use middleware stacks
+easy retrieval of actions.
+vm#destroy and vm#up now use the new middleware stack
+destroy middleware
+halt middleware
+provisioning
+networking middleware
+checkguestadditions middleware
+persisting the dotfile middleware
+environment has defaults for values. import properly sets vm
+options can now be passed into running actions
+boot action
+shared folder task
+forward ports action
+customize action
+import action. erroneous environments for actions.
+actions on environment and making them runnable
+bump to 0.4.3.dev for development
+v0.4.2
+detect if any collisions with non-hostonly networks for networking. [closes gh-102]
+ignore non-hostonly adapters for host only networking [closes gh-101]
+now checks if `unison` binary is installed before running
+rethinking unison foundation. tearing things out.
+s/nat engine/nat driver/
+ssh gets port from proper place in 3.2.x
+vagrant uses correct natforwarded port for 3.2.x
+`vagrant ssh` now takes an `--execute` (or `-e`) param for executing commands [closes gh-95]
+point to rubygems string instead of symbol for gemfile
+switched directory syncing over to unison
+reload after saving forwarded ports
+if no shared folders existed, don't worry about clearing them
+do not reload vm and everything if no forwarded ports were destroyed
+don't run vm customizations if none were specified
+vm definition blocks are now stackable. [closes gh-94]
+a vm can now have a host only network on multiple adapters
+verify ubuntu/debian install for host only networking
+join a specific host only network if name is specified.
+allow ssh commands to ignore exit status
+verify chef binaries exist prior to running chef provisioning [closes gh-89]
+properly download boxes from https sources. [closes gh-84]
+when verifying boxes, catch all exceptions
+new wrapper ssh session class to emit exit status as well. will be used in the future to raise exceptions for bad exit status. for now, works as a drop-in replacement.
+primary vm is ssh by default on call to `vagrant ssh`
+enable port forwarding to be directed at a specific adapter (nic), prevented entirely making standard use of tcp/ip and ensuring that port forwarding is only attempted when the nic is using the virtualbox nat.
+when util is included, extend the class as well [closes gh-83]
+do not worry about key permissions on windows [closes gh-79]
+check key permissions on ssh execute (must be 0600)
+corrected gemspec
+`vagrant reload` works with multi-vm
+`vagrant resume` with multiple vms
+`vagrant suspend` works with multi-vms
+`vagrant ssh` works with multi-vm
+can now specify which vms to up with `vagrant up` or will up all by default
+up command will up multiple vms (persisting doesn't work yet)
+environment properly loads vms
+ssh object is now on the vm, rather than the environment
+`vagrant destroy` always forces the shutdown (does not attempt graceful)
+if json parsing fails on reading the active list, just set it to an empty hash
+`vagrant status --global` flag to view global status
+vagrant status now uses strings.yml instead of hardcoding strings into the command
+activelist now contains meaningful information about the running vms
+linux shutdown state checking no longer requires the force param. its default
+switch back to json gem.
+forceful halting with `vagrant halt --force` (or -f for short)
+`vagrant halt` now attempts to gracefully shut down the machine (via system#halt)
+shared folder action uses new system abstraction
+glob loader to make glob loading easier
+v0.3.2 windows ruby 1.9 support
+export progress bar uses new syntax
+busy task no longer runs in a separate thread.
+reload sleeps 1 sec after halt to avoid ffi exception
+box verification uses the runner rather than the env
+boxes now properly use scoped environment
+fork-and-wait ssh on mac os x 10.5 [closes gh-51]
+sigint twice and vagrant will immediately exit, even if busy
+when listing subcommands, subcommand without descriptions are ignored
+`vagrant status` properly detects no rootfile
+box list subcommand
+proper subclassing for box subcommand
+status command
+resume subcommand
+suspend subcommand
+halt command
+ssh subcommand
+sort subcommands listing
+destroy subcommand
+up command
+base command now recursively dispatches, allowing for arbitrarily complex commands such as `vagrant a b c`
+commenting on the vagrant::command class
+option parsing is in on the base command
+on import/export, hide "parts" of progress (since its simply out of 100)
+shorten shared folders further [see gh-50]
+load vagrantfile in include/ directory for boxes if it exists
+export now uses proper function and has progress bar (like import)
+`vagrant down` is now `vagrant destroy`
+vm import now reports import progress!
+vm halting uses new vm#stop
+boot uses new vm#start method which only takes 1 arg
+sharedfolder uses the proper vm#save method
+forwarded ports task now calls vm#save properly
+`nics` on virtualbox are now called `network_adapters`
+tab => spaces
+box.find sets environment of found box
+box#directory properly passes environment to class method
+pass environment to box.find
+provisioning redone to use new environment
+converted box class to use new environment
+removing references to vagrant::env
+`vagrant box` uses new environment
+`vagrant resume` command now uses new environment
+`vagrant reload` uses new environment
+`vagrant halt` uses new environment
+`vagrant ssh` with new environment
+`vagrant up` process converted to new environment
+boot action converted to new environment
+sharedfolder action converted to new environment
+forwardport action converted to new environment
+`vagrant down` command and associated actions now use the new environment
+set the environment on the loaded box
+ssh class converted to instance methods. now loads on the environment
+the require_* methods and check_virtualbox! integrated into new environment
+environment#load_config! loads from the box directory and home directory as well
+new environment class can load home dir, box, and persisted vm
+port collision detection ignores if the vm is the current vm
+port collision detection now checks every virtualbox vm, not just the active list
+collision check is now done in `prepare` of forward port action.
+env.persist_vm also persists uuid to the activelist
+vm now has a `uuid` method
+reads of vagrant::activelist to track the active vagrant managed virtual environments.
+require the files, not puts them... its late.
+expand paths properly for loading so that files already loaded aren't loaded twice
+vagrantfile in the home path is now injected into the vagrantfile load sequence
+pull out common chef code into its own abstract provisioner
+provision action must call "prepare" on the provisioner
+provision class now properly figures out the provisioner and executes it
+base class for chef solo
+base provisioning class
+windows root path checking. interim solution.
+force minitar to 0.5.2.
+bumped gemspec to 0.1.4.pre.
+load action runner before all other files
+reload uses the new 'boot' action
+mit license
+`vagrant box` no longer requires a vagrantfile in the current directory.
+reload action only halts the machine if its running
+`vagrant-down` now uses reusable actions (a down action)
+resume uses the resume action now
+vagrant-up and vagrant-halt no longer raise exceptions when the vm is not in the proper state.
+check for included files before packaging
+default include files to empty array
+action runner clears actions after execution
+box downloading works (actions::box::download)
+pulled out action running from vm into its own actions::runner class
+removied emacs backup file :(
+ssh.up? returns false when an abrupt disconnect occurs
+vagrant-reload works
+forwarding ports now clears old ports first
+stubbed vagrant-reload command
+provisioning action
+start action
+forwarding ports action
+import action
+ssh.execute uses the new port helper
+signal trapping for sigint waits for busy signal to go low
+provisioning action
+packaging and unpackaging
+shared folder action.
+start action
+forwarding ports action
+import action
+require action base before everything else as well
+spelling correction
+packaging working
+one more reference to "hobo"
+finishing the renaming process
+and then god said unto thee, "you shall be named vagrant."
+chef solo is run now
+provisioning beginning. not much done yet.
+shared folder is now properly mounted on hobo-up
+typo
+hobo-up waits for successful boot now
+hobo-ssh
+hobo-up now starts the vm in headless mode. hobo-down will force quit the vm if its running
+hobo-up now sets up the shared folder
+hobo-down now properly uses the new hobo::vm object rather than a pure vbox vm object.
+hobo::env now loads the persisted vm as a hobo::vm object
+hobo::vm uses instance methods now since the vm is a form of state
+hobo-down and env.require_persisted_vm
+hobo boot process loads the uuid as vm object rather than the raw uuid.
+hobo-up persists the uuid of the vm
+function to persist uuid
+load the path to hobo file and use that path to load uuid
+load_dotfile uses path traversal and not a regex
+walks the parent folders to find the dotfile
+expect script handles the port
+persisted_uuid will be null unless the dotfile exists
+got some binaries in, a shell for vm management
+whitespace
+env required yaml
+goodbye virtual_box.rb, hello virtualbox gem
+destroying vms is now possible
+back to mocha for now. flexmock made stubbing awkward.
+corrected bundler require

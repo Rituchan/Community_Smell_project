@@ -1,10 +1,17 @@
+"""
+Questo script analizza i file di correlazione di Pearson per determinare i cluster di progetti in base alla correlazione tra
+diversi community smells e metriche. Per ciascuna combinazione di smell e metrica, il codice legge i valori di correlazione e
+p-value dai file CSV, applica una soglia di p-value e determina il cluster di appartenenza (positivo, negativo o neutro) in base
+al valore di correlazione. I risultati vengono salvati in file CSV separati.
+"""
+
 import os
 import pandas as pd
 
 # Percorso della cartella contenente i file
-folder_path = '/Users/marco/PycharmProjects/Community_Smell_project/pearson-estimate'
-pvalue_folder_path = '/Users/marco/PycharmProjects/Community_Smell_project/pearson_p-value'
-output_folder = '/Users/marco/PycharmProjects/Community_Smell_project/data_dir_pearson'
+folder_path = '../pearson-estimate'
+pvalue_folder_path = '../pearson_p-value'
+output_folder = '../data_dir_pearson'
 
 # Community smells e metriche
 data_pairs = {

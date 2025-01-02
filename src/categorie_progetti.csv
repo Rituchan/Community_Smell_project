@@ -1,0 +1,21 @@
+Progetto,Ambito di Utilizzo,Linguaggio di Programmazione
+Django,Sviluppo Web,Python
+Rails,Sviluppo Web,Ruby
+AngularJS,Sviluppo Web,JavaScript
+Node.js,Sviluppo Web,JavaScript
+Firefox,Sviluppo Web,"C++, JavaScript"
+Python,Programmazione generale,Python
+Emacs,Sviluppo Software,Lisp
+Git,"Gestione Versioni, CI/CD",C
+GitLab,"Gestione Versioni, CI/CD","Ruby, Go"
+Vagrant,Gestione Ambienti,Ruby
+QEMU,Virtualizzazione e Testing,C
+LLVM,Compilazione,"C, C++"
+FFmpeg,Multimedia,C
+Gstreamer,Multimedia,C
+Blender,Grafica 3D,"C, C++"
+Mesa,Grafica 3D,"C, C++"
+LibreOffice,Produttività,Python
+Bitcoin,Blockchain e Criptovalute,"C++, Python"
+Salt,Automazione,"Python, C"
+U-Boot,Avvio Sistemi Embedded,C

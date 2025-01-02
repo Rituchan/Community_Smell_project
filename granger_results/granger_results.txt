@@ -1,0 +1,307 @@
+=== Risultati Test di Granger ===
+
+
+=== Risultati per il progetto: GitLab_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.005).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: U-boot_report ===
+prima.donnas: Serie stazionaria (p-value=0.009).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.001).
+missing.links: Serie stazionaria (p-value=0.031).
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: black.cloud causa radio.silence
+Significativo: black.cloud causa radio.silence (p-value=0.040)
+
+Test di Granger: black.cloud causa missing.links
+Significativo: black.cloud causa missing.links (p-value=0.013)
+
+Test di Granger: radio.silence causa org.silo
+Significativo: radio.silence causa org.silo (p-value=0.026)
+
+Test di Granger: org.silo causa prima.donnas
+Significativo: org.silo causa prima.donnas (p-value=0.002)
+
+
+=== Risultati per il progetto: Mesa_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.000).
+
+Test di Granger: prima.donnas causa radio.silence
+Significativo: prima.donnas causa radio.silence (p-value=0.048)
+
+Test di Granger: prima.donnas causa missing.links
+Significativo: prima.donnas causa missing.links (p-value=0.036)
+
+Test di Granger: black.cloud causa missing.links
+Significativo: black.cloud causa missing.links (p-value=0.009)
+
+Test di Granger: black.cloud causa org.silo
+Significativo: black.cloud causa org.silo (p-value=0.004)
+
+Test di Granger: missing.links causa prima.donnas
+Significativo: missing.links causa prima.donnas (p-value=0.038)
+
+
+=== Risultati per il progetto: Django_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: missing.links causa black.cloud
+Significativo: missing.links causa black.cloud (p-value=0.006)
+
+Test di Granger: org.silo causa black.cloud
+Significativo: org.silo causa black.cloud (p-value=0.007)
+
+
+=== Risultati per il progetto: Emacs_report ===
+prima.donnas: Serie stazionaria (p-value=0.006).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa radio.silence
+Significativo: prima.donnas causa radio.silence (p-value=0.029)
+
+Test di Granger: black.cloud causa missing.links
+Significativo: black.cloud causa missing.links (p-value=0.000)
+
+Test di Granger: black.cloud causa org.silo
+Significativo: black.cloud causa org.silo (p-value=0.000)
+
+Test di Granger: radio.silence causa black.cloud
+Significativo: radio.silence causa black.cloud (p-value=0.037)
+
+
+=== Risultati per il progetto: FFmpeg_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa radio.silence
+Significativo: prima.donnas causa radio.silence (p-value=0.045)
+
+Test di Granger: missing.links causa black.cloud
+Significativo: missing.links causa black.cloud (p-value=0.010)
+
+Test di Granger: org.silo causa black.cloud
+Significativo: org.silo causa black.cloud (p-value=0.012)
+
+
+=== Risultati per il progetto: Nodejs_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: radio.silence causa missing.links
+Significativo: radio.silence causa missing.links (p-value=0.029)
+
+Test di Granger: radio.silence causa org.silo
+Significativo: radio.silence causa org.silo (p-value=0.038)
+
+
+=== Risultati per il progetto: Rails_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa org.silo
+Significativo: prima.donnas causa org.silo (p-value=0.035)
+
+Test di Granger: radio.silence causa missing.links
+Significativo: radio.silence causa missing.links (p-value=0.013)
+
+Test di Granger: radio.silence causa org.silo
+Significativo: radio.silence causa org.silo (p-value=0.014)
+
+
+=== Risultati per il progetto: LibreOffice_report ===
+prima.donnas: Serie stazionaria (p-value=0.005).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.018).
+
+
+=== Risultati per il progetto: Git_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie stazionaria (p-value=0.033).
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.009).
+
+Test di Granger: black.cloud causa org.silo
+Significativo: black.cloud causa org.silo (p-value=0.000)
+
+Test di Granger: radio.silence causa black.cloud
+Significativo: radio.silence causa black.cloud (p-value=0.008)
+
+Test di Granger: radio.silence causa missing.links
+Significativo: radio.silence causa missing.links (p-value=0.020)
+
+Test di Granger: missing.links causa black.cloud
+Significativo: missing.links causa black.cloud (p-value=0.025)
+
+
+=== Risultati per il progetto: iPython_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.000).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: black.cloud causa missing.links
+Significativo: black.cloud causa missing.links (p-value=0.047)
+
+Test di Granger: black.cloud causa org.silo
+Significativo: black.cloud causa org.silo (p-value=0.041)
+
+Test di Granger: org.silo causa missing.links
+Significativo: org.silo causa missing.links (p-value=0.046)
+
+
+=== Risultati per il progetto: LLVM_report ===
+prima.donnas: Serie stazionaria (p-value=0.003).
+black.cloud: Serie stazionaria (p-value=0.000).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa missing.links
+Significativo: prima.donnas causa missing.links (p-value=0.050)
+
+Test di Granger: missing.links causa radio.silence
+Significativo: missing.links causa radio.silence (p-value=0.029)
+
+
+=== Risultati per il progetto: Gstreamer_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.026).
+org.silo: Serie stazionaria (p-value=0.035).
+
+Test di Granger: black.cloud causa radio.silence
+Significativo: black.cloud causa radio.silence (p-value=0.002)
+
+Test di Granger: radio.silence causa prima.donnas
+Significativo: radio.silence causa prima.donnas (p-value=0.041)
+
+Test di Granger: radio.silence causa black.cloud
+Significativo: radio.silence causa black.cloud (p-value=0.001)
+
+
+=== Risultati per il progetto: Python_report ===
+prima.donnas: Serie stazionaria (p-value=nan).
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: org.silo causa missing.links
+Significativo: org.silo causa missing.links (p-value=0.000)
+
+
+=== Risultati per il progetto: AngularJS_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: Blender_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: radio.silence causa missing.links
+Significativo: radio.silence causa missing.links (p-value=0.000)
+
+Test di Granger: radio.silence causa org.silo
+Significativo: radio.silence causa org.silo (p-value=0.000)
+
+
+=== Risultati per il progetto: Firefox_report ===
+prima.donnas: Serie non stazionaria, differenziata.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie stazionaria (p-value=0.000).
+org.silo: Serie stazionaria (p-value=0.001).
+
+Test di Granger: radio.silence causa prima.donnas
+Significativo: radio.silence causa prima.donnas (p-value=0.032)
+
+
+=== Risultati per il progetto: QEMU_report ===
+prima.donnas: Serie stazionaria (p-value=0.003).
+black.cloud: Serie non stazionaria, differenziata.
+radio.silence: Serie stazionaria (p-value=0.042).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa org.silo
+Significativo: prima.donnas causa org.silo (p-value=0.003)
+
+Test di Granger: black.cloud causa org.silo
+Significativo: black.cloud causa org.silo (p-value=0.009)
+
+Test di Granger: missing.links causa prima.donnas
+Significativo: missing.links causa prima.donnas (p-value=0.027)
+
+Test di Granger: missing.links causa radio.silence
+Significativo: missing.links causa radio.silence (p-value=0.000)
+
+Test di Granger: org.silo causa black.cloud
+Significativo: org.silo causa black.cloud (p-value=0.005)
+
+
+=== Risultati per il progetto: Salt_report ===
+prima.donnas: Serie stazionaria (p-value=0.014).
+black.cloud: Serie stazionaria (p-value=0.014).
+radio.silence: Serie non stazionaria, differenziata.
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+Test di Granger: prima.donnas causa radio.silence
+Significativo: prima.donnas causa radio.silence (p-value=0.014)
+
+Test di Granger: radio.silence causa prima.donnas
+Significativo: radio.silence causa prima.donnas (p-value=0.000)
+
+
+=== Risultati per il progetto: Bitcoin_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.017).
+missing.links: Serie non stazionaria, differenziata.
+org.silo: Serie non stazionaria, differenziata.
+
+
+=== Risultati per il progetto: Vagrant_report ===
+Serie costante per prima.donnas. Test ADF non eseguito.
+Serie costante per black.cloud. Test ADF non eseguito.
+radio.silence: Serie stazionaria (p-value=0.000).
+missing.links: Serie stazionaria (p-value=0.030).
+org.silo: Serie stazionaria (p-value=0.029).
