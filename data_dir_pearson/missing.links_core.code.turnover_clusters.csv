@@ -1,5 +1,0 @@
-Project,Cluster,Correlation,P-Value
-GitLab_,Cluster negativo,-0.752629322894387,0.0075186436533137
-Django_,Cluster negativo,-0.660361170131564,0.0269973159172876
-FFmpeg_,Cluster negativo,-0.674056024495011,0.0229396570562603
-Firefox_,Cluster negativo,-0.915676348223732,7.6016746379648e-05
