@@ -1,4 +1,0 @@
-Project,Cluster,Correlation,P-Value
-GitLab_spearman-estimate.csv,Cluster negativo,-0.727272727272727,0.0150173742825602
-Vagrant_spearman-estimate.csv,Cluster negativo,-0.619591584706359,0.042040065749582
-Firefox_spearman-estimate.csv,Cluster negativo,-0.936073059360731,2.25298532719732e-05

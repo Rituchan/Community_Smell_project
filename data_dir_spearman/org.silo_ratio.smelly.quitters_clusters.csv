@@ -1,5 +1,0 @@
-Project,Cluster,Correlation,P-Value
-GitLab_spearman-estimate.csv,Cluster positivo,0.818181818181818,0.0037344705533185
-U-boot_spearman-estimate.csv,Cluster positivo,0.642370687085269,0.0330647072517203
-Salt_spearman-estimate.csv,Cluster positivo,0.763636363636364,0.0092159866545499
-Django_spearman-estimate.csv,Cluster negativo,-0.824603506116551,0.0017894598527491
